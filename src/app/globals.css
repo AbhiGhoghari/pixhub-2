@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-black: #000000;
+
+  /* Color Palette */
+  --blue-1: #0d1b2a;
+  --blue-2: #1b263b;
+  --blue-3: #415a77;
+  --blue-start: #2563eb;
+  --blue-mid: #3b82f6;
+  --blue-end: #60a5fa;
+
+  --blue-glow-light: rgba(59, 130, 246, 0.7);
+  --blue-neon: #3b82f6;
+  --purple-neon: #8b5cf6;
+
+  /* Glow & Effects */
+  --glow: rgba(59, 130, 246, 0.8);
+  --glow-weak: rgba(59, 130, 246, 0.3);
+  --glow-strong: rgba(59, 130, 246, 1);
+
+  --foreground: #ffffff;
+  --background: var(--bg-black);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ====== BASE ====== */
+body {
+  background: var(--bg-black);
+  /* background: #0b0f1a; */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ====== TEXT GRADIENT ====== */
+.text-gradient-blue {
+  background: linear-gradient(90deg, var(--blue-start), var(--blue-mid), var(--blue-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ====== NEON STYLES ====== */
+.neon-frame {
+  border: 1px solid var(--glow);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .6),
+    0 0 20px var(--glow),
+    inset 0 0 12px rgba(255, 255, 255, .04);
+  background: radial-gradient(120% 120% at 20% 10%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, 0) 55%);
+}
+
+.neon-border-blue {
+  border: 1px solid var(--blue-glow-light);
+  box-shadow:
+    0 0 10px var(--blue-glow-light),
+    0 0 20px var(--blue-glow-light),
+    0 0 40px var(--blue-glow-light);
+}
+
+.nav-glass {
+  border-radius: 9999px;
+  background: radial-gradient(120% 180% at 50% -10%, rgba(80, 130, 255, .25), rgba(12, 17, 40, .9) 48%), rgba(0, 0, 0, .55);
+  border: 1px solid var(--glow-weak);
+  box-shadow: 0 0 32px var(--glow), inset 0 1px 0 rgba(255, 255, 255, .06);
+  backdrop-filter: blur(12px);
+}
+
+.btn-neon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .95rem 1.6rem;
+  border-radius: 9999px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--blue-start), var(--blue-mid), var(--blue-end));
+  border: 1px solid var(--glow);
+  box-shadow: 0 0 18px var(--glow), 0 12px 28px rgba(0, 0, 0, .6);
+  transition: transform .15s ease, box-shadow .3s ease, filter .3s ease;
+}
+
+.btn-neon::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(120% 120% at -10% 0%, rgba(255, 255, 255, .35), rgba(255, 255, 255, 0) 52%);
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+
+.btn-neon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 26px var(--glow-strong), 0 16px 36px rgba(0, 0, 0, .7);
+  filter: saturate(1.05);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+:where(.animate-marquee, .animate-marquee-vertical) {
+  --duration: 40s;
+  --gap: 1rem;
+}
+
+.\[\-\-duration\:40s\] {
+  --duration: 40s;
+}
+
+.\[\-\-gap\:1rem\] {
+  --gap: 1rem;
+}
+
+.\[gap\:var\(\-\-gap\)\] {
+  gap: var(--gap);
+}
+
+.\[animation-direction\:reverse\] {
+  animation-direction: reverse;
+}
+
+.group:hover .group-hover\:\[animation-play-state\:paused\] {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-marquee,
+  .animate-marquee-vertical {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+  }
+}
+
+/* notch (keep this if you already have it) */
+.cut-corner {
+  --cc: 22px;
+  clip-path: polygon(0 0, calc(100% - var(--cc)) 0, 100% var(--cc), 100% 100%, 0 100%);
+}
+
+/* animated conic ring (ONE copy only) */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.animate-border {
+  animation: border-rotate 4s linear infinite;
+  will-change: --border-angle;
+}
+
+.conic-border {
+  background:
+    /* inner fill (on top) */
+    linear-gradient(45deg, #0a0f1e, #0e162e 50%, #0b1126) padding-box,
+    /* outer ring (behind) */
+    conic-gradient(from var(--border-angle),
+      rgb(71 85 105 / .48) 80%,
+      #6366f1 86%,
+      #93c5fd 90%,
+      #6366f1 94%,
+      rgb(71 85 105 / .48) 100%) border-box;
 }
