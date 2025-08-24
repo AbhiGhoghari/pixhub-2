@@ -2,45 +2,51 @@
 import React from 'react';
 import Marquee from '@/components/ui/marquee';
 import ShinyButton from '../ui/ShinyButton';
+import avatar1 from '../../../public/image/avatar/avatar1.jpg';
+import avatar2 from '../../../public/image/avatar/avatar2.jpg';
+import avatar3 from '../../../public/image/avatar/avatar3.jpg';
+import avatar4 from '../../../public/image/avatar/avatar4.jpg';
+import avatar5 from '../../../public/image/avatar/avatar5.jpg';
+import avatar6 from '../../../public/image/avatar/avatar6.jpg';
+import avatar7 from '../../../public/image/avatar/avatar7.jpg';
+import avatar8 from '../../../public/image/avatar/avatar8.jpg';
+import avatar9 from '../../../public/image/avatar/avatar9.jpg';
+import avatar10 from '../../../public/image/avatar/avatar10.jpg';
+import avatar11 from '../../../public/image/avatar/avatar11.jpg';
+import avatar12 from '../../../public/image/avatar/avatar12.jpg';
+import avatar13 from '../../../public/image/avatar/avatar13.jpg';
+import avatar14 from '../../../public/image/avatar/avatar14.jpg';
+import avatar15 from '../../../public/image/avatar/avatar15.jpg';
+import avatar16 from '../../../public/image/avatar/avatar16.jpg';
+import avatar17 from '../../../public/image/avatar/avatar17.jpg';
+import avatar18 from '../../../public/image/avatar/avatar18.jpg';
+import avatar19 from '../../../public/image/avatar/avatar19.jpg';
+import avatar20 from '../../../public/image/avatar/avatar20.jpg';
+import avatar21 from '../../../public/image/avatar/avatar21.jpg';
+import avatar22 from '../../../public/image/avatar/avatar22.jpg';
+import avatar23 from '../../../public/image/avatar/avatar23.jpg';
+import avatar24 from '../../../public/image/avatar/avatar24.jpg';
+import avatar25 from '../../../public/image/avatar/avatar25.jpg';
+import avatar26 from '../../../public/image/avatar/avatar26.jpg';
+import avatar27 from '../../../public/image/avatar/avatar27.jpg';
+import avatar28 from '../../../public/image/avatar/avatar28.jpg';
+import avatar29 from '../../../public/image/avatar/avatar29.jpg';
+import avatar30 from '../../../public/image/avatar/avatar30.jpg';
+import avatar31 from '../../../public/image/avatar/avatar31.jpg';
+import avatar32 from '../../../public/image/avatar/avatar32.jpg';
+import avatar33 from '../../../public/image/avatar/avatar33.jpg';
+import avatar34 from '../../../public/image/avatar/avatar34.jpg';
+import avatar35 from '../../../public/image/avatar/avatar35.jpg';
 import Image from 'next/image';
 
 export default function PixhubCommunity() {
     const avatars = [
-        "https://randomuser.me/api/portraits/men/1.jpg",
-        "https://randomuser.me/api/portraits/women/1.jpg",
-        "https://randomuser.me/api/portraits/men/2.jpg",
-        "https://randomuser.me/api/portraits/women/2.jpg",
-        "https://randomuser.me/api/portraits/men/3.jpg",
-        "https://randomuser.me/api/portraits/women/3.jpg",
-        "https://randomuser.me/api/portraits/men/4.jpg",
-        "https://randomuser.me/api/portraits/women/4.jpg",
-        "https://randomuser.me/api/portraits/men/5.jpg",
-        "https://randomuser.me/api/portraits/women/5.jpg",
-        "https://randomuser.me/api/portraits/men/6.jpg",
-        "https://randomuser.me/api/portraits/women/6.jpg",
-        "https://randomuser.me/api/portraits/men/7.jpg",
-        "https://randomuser.me/api/portraits/women/7.jpg",
-        "https://randomuser.me/api/portraits/men/8.jpg",
-        "https://randomuser.me/api/portraits/women/8.jpg",
-        "https://randomuser.me/api/portraits/men/9.jpg",
-        "https://randomuser.me/api/portraits/women/9.jpg",
-        "https://randomuser.me/api/portraits/men/10.jpg",
-        "https://randomuser.me/api/portraits/women/10.jpg",
-        "https://randomuser.me/api/portraits/men/11.jpg",
-        "https://randomuser.me/api/portraits/women/11.jpg",
-        "https://randomuser.me/api/portraits/men/12.jpg",
-        "https://randomuser.me/api/portraits/women/12.jpg",
-        "https://randomuser.me/api/portraits/men/13.jpg",
-        "https://randomuser.me/api/portraits/women/13.jpg",
-        "https://randomuser.me/api/portraits/men/14.jpg",
-        "https://randomuser.me/api/portraits/women/14.jpg",
-        "https://randomuser.me/api/portraits/men/15.jpg",
-        "https://randomuser.me/api/portraits/women/15.jpg",
-        "https://randomuser.me/api/portraits/women/16.jpg",
-        "https://randomuser.me/api/portraits/women/17.jpg",
-        "https://randomuser.me/api/portraits/women/18.jpg",
-        "https://randomuser.me/api/portraits/women/19.jpg",
-        "https://randomuser.me/api/portraits/women/20.jpg",
+        avatar1, avatar2, avatar3, avatar4, avatar5, avatar6,
+        avatar7, avatar8, avatar9, avatar10, avatar11, avatar12,
+        avatar13, avatar14, avatar15, avatar16, avatar17, avatar18,
+        avatar19, avatar20, avatar21, avatar22, avatar23, avatar24,
+        avatar25, avatar26, avatar27, avatar28, avatar29, avatar30,
+        avatar31, avatar32, avatar33, avatar34, avatar35
     ];
 
     const AvatarBubble = ({ src }) => (
