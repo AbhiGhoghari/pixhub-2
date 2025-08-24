@@ -40,12 +40,12 @@ function Navbar({ className }) {
     { label: "Product", href: "/product" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
-    { label: "About", href: "/about" },
+    { label: "Service", href: "/service" },
     { label: "FAQs", href: "/faqs" },
   ];
 
   return (
-    <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+    <div className={cn("absolute top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
       <Menu>
         {menuItems.map((item, index) => (
           <MenuItem key={index} label={item.label} href={item.href} />

@@ -1,30 +1,36 @@
 'use client';
 import Image from 'next/image'
 import React from 'react'
+import share from '../../../public/image/png/share.png';
+import done from '../../../public/image/png/done.png';
+import support from '../../../public/image/png/support.png';
+import thumsup from '../../../public/image/png/thumsup.png';
+import money from '../../../public/image/png/money.png';
+import sun from '../../../public/image/png/sun.png';
 
 const cardsData = [
     {
         title: 'Instant Access',
         hoverTitle: 'Seamless & Instant Accessibility',
         desc: "Empowering your creative journey with instant access to premium resources, ensuring you never miss a beat in your projects.",
-        img: '/simplechartt.webp',
-        hoverImg: '/chartt.webp',
+        img: share,
+        hoverImg: done,
         gradient: { from: '#242424', to: '#020202', fromHover: '#182135', toHover: '#080808' },
     },
     {
         title: "Customer Support",
         hoverTitle: 'Responsive Assistance at Your Fingertips',
         desc: "Our dedicated support team is here to assist you with any questions or issues, ensuring a smooth experience with our premium resources.",
-        img: '/fullverificationtwo_fpi9eo.webp',
-        hoverImg: '/verification_iwnfmj.webp',
+        img: support,
+        hoverImg: thumsup,
         gradient: { from: '#050a0a', to: '#051818', fromHover: '#05070a', toHover: '#0b1a3b' },
     },
     {
         title: 'Pocket Friendly',
         hoverTitle: "Say Goodbye to Expensive Subscriptions",
         desc: "Say hello to affordable creativity with our pocket-friendly plans, designed to give you access to premium resources without breaking the bank.",
-        img: '/chat_zinhdw.webp',
-        hoverImg: '/hide_chat_egk7h4.webp',
+        img: money,
+        hoverImg: sun,
         gradient: { from: '#171c35', to: '#000000', fromHover: '#2b131e', toHover: '#141414' },
     },
 ];
@@ -64,19 +70,19 @@ export default function Support() {
 
                                 <p className="text-sm text-slate-500">{c.desc}</p>
 
-                                <div className="relative mt-5 group-hover:-translate-y-2 transition-transform duration-500 ease-in-out">
+                                <div className="relative mt-5 flex justify-center group-hover:-translate-y-2 transition-transform duration-500 ease-in-out">
                                     <Image
                                         className="group-hover:opacity-0 transition-opacity duration-500 object-cover h-full m-0 p-0"
                                         src={c.img}
-                                        width={350}
-                                        height={240}
+                                        width={250}
+                                        height={250}
                                         alt={c.title}
                                     />
                                     <Image
-                                        className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity object-cover duration-300 h-full m-0 p-0"
+                                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity object-cover duration-300 h-full m-0 p-0"
                                         src={c.hoverImg}
-                                        width={350}
-                                        height={240}
+                                        width={250}
+                                        height={250}
                                         alt={`${c.title} hover`}
                                         aria-hidden="true"
                                     />
