@@ -61,6 +61,63 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* === Section-scoped diagonal blue sweep (like your 2nd image) === */
+.aurora-sweep {
+  position: relative;
+  isolation: isolate;
+  --blue-rgb: 59, 130, 246;
+  --sweep-angle: 108deg;
+  --sweep-alpha: .40;
+  --right-alpha-1: .22;
+  --right-alpha-2: .14;
+  --blur: 18px;
+}
+
+/* left→right diagonal sweep */
+.aurora-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    /* soft diagonal wash from left */
+    linear-gradient(var(--sweep-angle),
+      rgba(var(--blue-rgb), var(--sweep-alpha)) 0%,
+      rgba(15, 23, 42, .22) 34%,
+      rgba(4, 7, 12, 0) 66%);
+}
+
+/* right-side “panel” glow stacks */
+.aurora-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(520px 520px at 102% 22%,
+      rgba(var(--blue-rgb), var(--right-alpha-1)) 0%,
+      rgba(var(--blue-rgb), 0) 60%),
+    radial-gradient(440px 520px at 102% 68%,
+      rgba(var(--blue-rgb), var(--right-alpha-2)) 0%,
+      rgba(var(--blue-rgb), 0) 64%);
+  filter: blur(var(--blur));
+}
+
+/* optional: a tiny bottom vignette for depth (toggle per section) */
+.aurora-sweep-vignette::after {
+  background:
+    radial-gradient(520px 520px at 102% 22%,
+      rgba(var(--blue-rgb), var(--right-alpha-1)) 0%,
+      rgba(var(--blue-rgb), 0) 60%),
+    radial-gradient(440px 520px at 102% 68%,
+      rgba(var(--blue-rgb), var(--right-alpha-2)) 0%,
+      rgba(var(--blue-rgb), 0) 64%),
+    radial-gradient(120% 100% at 50% 100%,
+      rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .35) 100%);
+}
+
 /* ====== NEON STYLES ====== */
 .neon-frame {
   border: 1px solid var(--glow);
@@ -220,8 +277,15 @@ body {
 }
 
 @keyframes ripple {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50%      { transform: translate(-50%, -50%) scale(0.9); }
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
 
 .animate-ripple {

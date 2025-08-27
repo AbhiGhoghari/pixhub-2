@@ -9,7 +9,7 @@ import ShinyButton from '../ui/ShinyButton';
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden pt-44 pb-24">
+    <section className="relative overflow-hidden pt-44 pb-24">
       {/* Centered content */}
       <div className="relative flex flex-col justify-center items-center z-10">
         <div className="text-center relative">
