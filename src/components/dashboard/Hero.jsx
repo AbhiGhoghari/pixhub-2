@@ -9,20 +9,22 @@ import ShinyButton from '../ui/ShinyButton';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-44 pb-24">
-      {/* Centered content */}
-      <div className="relative flex flex-col justify-center items-center z-10">
+    <section className="relative pt-32 md:pt-44 pb-16 sm:pb-20 md:pb-24">
+      <div className="relative flex flex-col justify-center items-center z-10 max-w-8xl mx-auto px-4 sm:px-6">
         <div className="text-center relative">
           <div className="glow-behind"></div>
-          <h1 className="text-gradient-blue text-7xl font-extrabold tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)]">
+          <h1 className="text-gradient-blue font-extrabold tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)]
+                         text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
             The best premium resources,
           </h1>
 
-          <p className="pt-6 text-blue-100/90 text-xl font-normal flex items-center justify-center drop-shadow-[0_0_12px_rgba(79,134,255,.4)]">
-            Unlimited Benefits, now for just&nbsp;<FaIndianRupeeSign className="inline -mt-1" />249!
+          <p className="pt-4 sm:pt-6 text-blue-100/90 font-normal flex items-center justify-center 
+                        drop-shadow-[0_0_12px_rgba(79,134,255,.4)]
+                        text-base sm:text-lg md:text-xl">
+            Unlimited Benefits, now for just&nbsp;
+            <FaIndianRupeeSign className="inline -mt-1" />249!
           </p>
-
-          <div className="pt-9">
+          <div className="pt-6 sm:pt-8 md:pt-9">
             <ShinyButton label="Get Instant Access" />
           </div>
         </div>

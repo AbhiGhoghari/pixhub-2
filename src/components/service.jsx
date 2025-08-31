@@ -14,7 +14,7 @@ const cardsData = [
         hoverTitle: 'All Your Favorite Marketplaces in One Place',
         desc:
             'Pay just 249 and instantly unlock downloads from Freepik, Envato, and Flaticon-graphics, templates, and assets for personal or professional projects.',
-        img: asset,          
+        img: asset,
         gradient: { from: '#0b1120', to: '#050a0f', fromHover: '#0b1f3a', toHover: '#07122a' },
     },
     {
@@ -22,7 +22,7 @@ const cardsData = [
         hoverTitle: 'Clear, Simple Pricing',
         desc:
             'Pay once and download what you need-no extra charges, no surprises, just full access to everything.',
-        img: toggle,           
+        img: toggle,
         gradient: { from: '#050a0a', to: '#051818', fromHover: '#0b132b', toHover: '#0b1a3b' },
     },
     {
@@ -30,7 +30,7 @@ const cardsData = [
         hoverTitle: 'Grab Assets in Seconds',
         desc:
             'Skip the hassle of multiple sign-ups. Search, pick, and download in just a few clicks-smooth and quick.',
-        img: forward,          
+        img: forward,
         gradient: { from: '#0a0f1e', to: '#000000', fromHover: '#0d1937', toHover: '#0a1024' },
     },
     {
@@ -38,21 +38,21 @@ const cardsData = [
         hoverTitle: 'Designed to Feel Effortless',
         desc:
             'A clean, friendly interface that makes finding and downloading assets simple-everything in one place.',
-        img: easy,           
+        img: easy,
         gradient: { from: '#0e132a', to: '#06080f', fromHover: '#162146', toHover: '#0b1026' },
     },
     {
         title: 'Fast, Secure, and Reliable',
         hoverTitle: 'Protected & Optimised for Speed',
         desc: 'Quick, secure delivery powered by modern infrastructure to keep your workflow uninterrupted.',
-        img: fast,           
+        img: fast,
         gradient: { from: '#0b1224', to: '#05080f', fromHover: '#10244f', toHover: '#0a1127' },
     },
     {
         title: 'Access to Millions of Resources',
         hoverTitle: 'Endless Creative Possibilities',
         desc: 'Illustrations, templates, fonts, UI kits and more-millions of high-quality assets without restrictions.',
-        img: download,           
+        img: download,
         gradient: { from: '#0a0f1c', to: '#06080f', fromHover: '#122a58', toHover: '#0a1024' },
     },
 ];
@@ -60,7 +60,7 @@ const cardsData = [
 export default function Service() {
     return (
         <div className='flex flex-col justify-center items-center'>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-32 py-20">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 xl:gap-10 py-12 sm:py-16 lg:py-20 px-5 sm:px-8 xl:px-10 2xl:px-32">
                 {cardsData.map((c, i) => (
                     <div
                         key={c.id ?? i}

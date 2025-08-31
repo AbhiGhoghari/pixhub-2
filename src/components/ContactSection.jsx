@@ -3,15 +3,11 @@ import React from 'react';
 
 export default function ContactSection() {
   return (
-    <div
-      className="relative mx-auto px-16 pt-50 pb-16"
-    >
-      {/* right-side soft blue sweep (scoped to this section only) */}
+    <div className="relative mx-auto px-4 sm:px-6 lg:px-16 pt-32 md:pt-40 pb-10 sm:pb-16">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          background:
-            `linear-gradient(108deg, rgba(59,130,246,.28) 0%, rgba(12,16,32,.15) 42%, rgba(5,7,15,0) 66%),
+          background: `linear-gradient(108deg, rgba(59,130,246,.28) 0%, rgba(12,16,32,.15) 42%, rgba(5,7,15,0) 66%),
              radial-gradient(520px 520px at 102% 22%, rgba(59,130,246,.22) 0%, rgba(59,130,246,0) 60%),
              radial-gradient(440px 520px at 102% 68%, rgba(59,130,246,.14) 0%, rgba(59,130,246,0) 64%)`,
           filter: 'blur(18px)',
@@ -23,8 +19,8 @@ export default function ContactSection() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        {/* LEFT: intro + quick contact cards */}
-        <div className="space-y-6">
+        {/* LEFT */}
+        <div className="space-y-6 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 ring-1 ring-white/10">
             <span className="inline-block h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(59,130,246,.9)]" />
             Contact
@@ -34,7 +30,7 @@ export default function ContactSection() {
             Get in touch
           </h2>
 
-          <p className="max-w-xl text-sm leading-relaxed text-white/70">
+          <p className="pb-5 lg:pb-0 lg:max-w-xl text-sm md:text-base leading-relaxed text-white/70">
             Have questions or need help? Reach out and we’ll get back fast.
             We keep things simple, secure, and crystal clear.
           </p>
@@ -58,9 +54,9 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* RIGHT: glassy form */}
+        {/* RIGHT */}
         <div className="relative">
-          <div className="rounded-2xl conic-border border border-transparent animate-border transition-transform duration-800 bg-white/5 p-3 sm:p-4 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,.35)]">
+          <div className="rounded-2xl conic-border border border-transparent animate-border bg-white/5 p-3 sm:p-4 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,.35)]">
             <div className="rounded-xl bg-[#0b111f]/70 p-4 sm:p-6 backdrop-blur-xl ring-1 ring-white/10">
               <form
                 onSubmit={(e) => {
@@ -100,7 +96,6 @@ export default function ContactSection() {
                   />
                 </Field>
 
-                {/* submit bar like the reference (light slab + dark text) */}
                 <button
                   type="submit"
                   className="w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
@@ -111,12 +106,10 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* subtle top glow */}
           <div className="pointer-events-none absolute -top-6 left-1/2 h-12 w-3/5 -translate-x-1/2 rounded-full bg-blue-500/20 blur-2xl" />
         </div>
       </div>
 
-      {/* Local styles for inputs + cards */}
       <style jsx>{`
         .themed-input {
           width: 100%;
@@ -145,7 +138,6 @@ export default function ContactSection() {
   );
 }
 
-/* ---------- tiny pieces ---------- */
 
 function Field({ label, children }) {
   return (
@@ -158,7 +150,7 @@ function Field({ label, children }) {
 
 function ContactCard({ icon, title, subtitle }) {
   return (
-    <div className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3 ring-1 ring-white/10 transition hover:bg-white/[.07]">
+    <div className="group flex items-center justify-between rounded-xl conic-border border border-transparent animate-border p-3 sm:p-4 ring-1 ring-white/10 transition hover:bg-white/[.07]">
       <div className="flex items-center gap-3">
         <div className="grid h-10 w-10 place-items-center rounded-lg bg-[#0e1630] ring-1 ring-white/10 text-blue-300">
           {icon}
@@ -178,7 +170,6 @@ function ContactCard({ icon, title, subtitle }) {
   );
 }
 
-/* simple inline icons (no extra deps) */
 const MailIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
     <path d="M4 6h16v12H4z" />

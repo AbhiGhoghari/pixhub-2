@@ -15,7 +15,7 @@ export default function ScrollZoomVideo({ videoUrl }) {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center mt-20 z-40">
+    <div className="w-full flex justify-center items-center mt-16 lg:mt-20 z-40">
       <video
         ref={videoRef}
         className="transition-transform duration-300 ease-out w-3/4 max-w-3xl rounded-3xl neon-frame"

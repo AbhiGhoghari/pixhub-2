@@ -40,10 +40,16 @@ const faqs = [
 export default function Faqs() {
     return (
         <div className="pb-10">
-            <div className="text-center py-5">
+            <div className="text-center py-5 px-4 sm:px-12">
                 <div className="glow-behind"></div>
-                <h1 className='text-center text-5xl font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-[1.5]'>Got questions?</h1>
-                <h1 className='pt-3 text-blue-100/90 text-xl font-bold tracking-wide'>Because every ‘why’, meet powerful answers.</h1>
+                <h1 className="text-center font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-tight
+                       text-3xl sm:text-4xl md:text-5xl">
+                    Got questions?
+                </h1>
+                <h1 className="pt-3 text-blue-100/90 font-bold tracking-wide
+                       text-base sm:text-lg md:text-xl">
+                    Because every ‘why’, meet powerful answers.
+                </h1>
             </div>
             <div className="w-full p-6 max-w-6xl flex flex-col mx-auto rounded-xl shadow-lg">
                 <Accordion defaultValue={["item-1"]}>

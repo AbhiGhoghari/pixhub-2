@@ -23,15 +23,15 @@ export default function ScrollSplitMedia({ leftImage, rightImage, bottomVideoUrl
 
   return (
     <div>
-      <div ref={leftRef} className="absolute left-60 top-0 transition-transform duration-200 ease-out">
+      <div ref={leftRef} className="absolute lg:left-5 xl:left-42 2xl:left-60 top-0 transition-transform duration-200 ease-out">
         <Image src={leftImage} alt="Left picture" width={300} height={300} className="rounded-3xl neon-frame" />
       </div>
 
-      <div ref={rightRef} className="absolute right-40 top-5 transition-transform duration-200 ease-out">
+      <div ref={rightRef} className="absolute lg:right-5 xl:right-32 2xl:right-40 top-5 transition-transform duration-200 ease-out">
         <Image src={rightImage} alt="Right picture" width={280} height={400} className="rounded-3xl neon-frame" />
       </div>
 
-      <div className="absolute left-14 -bottom-10">
+      <div className="absolute lg:left-5 xl:left-14 -bottom-10">
         <video
           ref={videoRef}
           className="transition-transform duration-300 ease-out w-3/4 max-w-3xl rounded-3xl neon-frame"

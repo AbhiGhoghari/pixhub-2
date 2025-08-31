@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Marquee from '@/components/ui/marquee';
 import ShinyButton from '../ui/ShinyButton';
 import avatar1 from '../../../public/image/avatar/avatar1.jpg';
@@ -49,6 +49,23 @@ export default function PixhubCommunity() {
         avatar31, avatar32, avatar33, avatar34, avatar35
     ];
 
+    const [rows, setRows] = useState(4);
+
+    useEffect(() => {
+        function updateRows() {
+            const w = window.innerWidth;
+            if (w >= 1536) setRows(7);     // 2xl
+            else if (w >= 1280) setRows(5); // xl
+            else if (w >= 1024) setRows(4); // lg
+            else if (w >= 768) setRows(2); // md
+            else if (w >= 520) setRows(5); // sm
+            else setRows(3);             
+        }
+        updateRows();
+        window.addEventListener('resize', updateRows);
+        return () => window.removeEventListener('resize', updateRows);
+    }, []);
+
     const AvatarBubble = ({ src }) => (
         <Image
             src={src}
@@ -57,21 +74,22 @@ export default function PixhubCommunity() {
             width={200}
             height={200}
             className="m-3 h-20 w-20 rounded-full object-cover ring-1 ring-white/10 shadow-md
-                 hover:scale-105 transition-transform duration-300"
+                     hover:scale-105 transition-transform duration-300"
         />
     );
 
     return (
-        <section className="relative w-full overflow-hidden my-20">
+        <section className="relative w-full overflow-hidden mt-20 mb-5 md:mb-10">
             <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0d1224] via-[#0b1020] to-[#090e1a]" />
 
-            <div className="w-full h-96">
-                <div className="flex gap-8 items-center justify-between w-full h-full">
-                    <div className="max-w-4xl py-16 ps-[20rem]">
+            <div className="w-full h-[45rem] md:h-96">
+                <div className="flex flex-col md:flex-row gap-8 items-center justify-between w-full h-full pr-3">
+                    {/* LEFT SIDE TEXT */}
+                    <div className="max-w-4xl pt-12 pb-5 md:py-16 sm:ps-8 xl:ps-[12rem] 2xl:ps-[20rem] text-center md:text-left">
                         <div className="inline-flex items-center rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm text-indigo-200/90">
                             #1 Pixhub Server in the World
                         </div>
-                        <h2 className="mt-6 text-[40px] font-bold leading-tight text-white">
+                        <h2 className="mt-6 text-[40px] font-bold leading-tight text-white md:w-[75%]">
                             Be part of a <span className="text-gradient-blue">creative</span> community! 🌍
                         </h2>
 
@@ -80,10 +98,11 @@ export default function PixhubCommunity() {
                         </div>
                     </div>
 
+                    {/* RIGHT SIDE AVATARS */}
                     <div className="relative flex h-full flex-row items-center justify-center overflow-hidden">
-                        {Array.from({ length: 7 }).map((_, colIdx) => {
-                            const colItems = Array.from({ length: 7 }, (_, rowIdx) => {
-                                const index = (rowIdx * 7 + colIdx) % avatars.length;
+                        {Array.from({ length: rows }).map((_, colIdx) => {
+                            const colItems = Array.from({ length: rows }, (_, rowIdx) => {
+                                const index = (rowIdx * rows + colIdx) % avatars.length;
                                 return avatars[index];
                             });
 
@@ -102,19 +121,19 @@ export default function PixhubCommunity() {
                             );
                         })}
 
+                        {/* gradient fades */}
                         <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-[#0d1224] to-transparent" />
                         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#090e1a] to-transparent" />
                     </div>
-
                 </div>
             </div>
 
             <style>{`
-        .text-gradient-blue{
-          background: linear-gradient(90deg,#60a5fa,#3b82f6,#6366f1);
-          -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-        }
-      `}</style>
+            .text-gradient-blue{
+              background: linear-gradient(90deg,#60a5fa,#3b82f6,#6366f1);
+              -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+            }
+          `}</style>
         </section>
     );
 }
