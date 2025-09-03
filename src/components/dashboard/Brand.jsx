@@ -17,7 +17,7 @@ export default function Brand() {
   return (
     <div className="relative w-full overflow-hidden pt-8 sm:pt-10 text-center px-4">
       {/* Text */}
-      <p className="text-blue-100/90 leading-relaxed 
+      {/* <p className="text-blue-100/90 leading-relaxed 
                      text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto">
         Unlock premium graphics from{" "}
         <span className="font-semibold">Freepik</span>,{" "}
@@ -28,7 +28,7 @@ export default function Brand() {
           <FaIndianRupeeSign className="-mt-1" />249
         </span>
         <span className="opacity-80 text-sm sm:text-base">/month</span>. One membership. Infinite creations.
-      </p>
+      </p> */}
 
       {/* Logos Marquee */}
       <Marquee
