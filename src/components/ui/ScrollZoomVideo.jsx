@@ -7,7 +7,7 @@ export default function ScrollZoomVideo({ videoUrl }) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const scale = Math.min(1 + scrollY / 1000, 1.25); 
+      const scale = Math.min(1 + scrollY / 1000, 1.50); 
       if (videoRef.current) videoRef.current.style.transform = `scale(${scale})`;
     };
     window.addEventListener('scroll', handleScroll);
