@@ -5,36 +5,32 @@ import { FaPlus } from "react-icons/fa6";
 
 const faqs = [
     {
-        question: "What tools are included?",
+        question: "What is Designcrate.in?",
         answer:
-            "Currently, we offer access to Freepik, Envato, and Flaticon. More tools will be added soon!",
+            "Designcrate.in is a premium membership platform that provides access to a curated collection of digital tools for students, designers, developers, and content creators at an affordable price.",
     },
     {
-        question: "How do the subscriptions work, and how will I get access?",
+        question: "How does Designcrate works?",
         answer:
-            "After completing your payment, you will receive a dashboard ID and password via email. Simply log in to the dashboard to instantly start downloading resources.",
+            "Once you become a member, you get exclusive access to various premium tools through our user panel. You can activate the tools by following the provided instructions.",
     },
     {
-        question: "Will I receive after-sales support?",
+        question: "Who can benefit from Designcrate.in?",
         answer:
-            "Yes, we provide 24/7 support through the user dashboard. If you encounter any issues, you can contact us there, and we will resolve them as quickly as possible.",
+            "Designcrate.in is designed for students, designers, developers, and content creators who are looking for affordable access to premium digital tools.",
     },
     {
-        question: "Who is this pack designed for?",
+        question: "how much does membership cost?",
         answer:
-            "This pack is perfect for creative professionals and businesses, including: ✓ Graphic Designers ✓ Web Designers ✓ Content Creators ✓ YouTubers / Filmmakers ✓ Digital Marketers ✓ Freelancers ✓ Video Editors ✓ Business Owners",
+            "We offer multiple plans at competitive prices. Visit our Pricing Page for the latest membership rates.",
     },
     {
         question:
-            "I made the payment but haven't received the login email yet. What should I do?",
+            "what do i get with my subscription?",
         answer:
-            "It may take up to 10 minutes to receive the login credentials email after purchasing. If you haven’t received it within this time, please contact us via Instagram or email. We’re here to help!",
+            "Your subscription gives you access to 50+ premium tools, including e-learning platforms, AI tools, design resources, and more.",
     },
-    {
-        question: "Are there any additional requirements I should know about?",
-        answer:
-            "Currently, no additional requirements are needed. Just complete your payment, log in to the dashboard, and start downloading instantly!",
-    },
+  
 ];
 
 export default function Faqs() {

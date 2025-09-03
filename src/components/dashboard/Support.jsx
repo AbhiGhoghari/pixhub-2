@@ -9,15 +9,30 @@ import money from '../../../public/image/png/money.png';
 import sun from '../../../public/image/png/sun.png';
 
 const cardsData = [
-  { title: 'Instant Access', hoverTitle: 'Seamless & Instant Accessibility',
-    desc: "Empowering your creative journey with instant access to premium resources, ensuring you never miss a beat in your projects.",
-    img: share, hoverImg: done, gradient: { from: '#242424', to: '#020202', fromHover: '#182135', toHover: '#080808' } },
-  { title: "Customer Support", hoverTitle: 'Responsive Assistance at Your Fingertips',
-    desc: "Our dedicated support team is here to assist you with any questions or issues, ensuring a smooth experience with our premium resources.",
-    img: support, hoverImg: thumsup, gradient: { from: '#050a0a', to: '#051818', fromHover: '#05070a', toHover: '#0b1a3b' } },
-  { title: 'Pocket Friendly', hoverTitle: "Say Goodbye to Expensive Subscriptions",
-    desc: "Say hello to affordable creativity with our pocket-friendly plans, designed to give you access to premium resources without breaking the bank.",
-    img: money, hoverImg: sun, gradient: { from: '#171c35', to: '#000000', fromHover: '#2b131e', toHover: '#141414' } },
+  { 
+    title: 'Instant Access', 
+    hoverTitle: 'Seamless & Instant Accessibility',
+    desc: "Unlock 50+ premium platforms instantly with one subscription. No waiting, no hassle — just pure creativity at your fingertips.",
+    img: share, 
+    hoverImg: done, 
+    gradient: { from: '#242424', to: '#020202', fromHover: '#182135', toHover: '#080808' } 
+  },
+  { 
+    title: "Customer Support", 
+    hoverTitle: 'Responsive Assistance at Your Fingertips',
+    desc: "Never feel stuck. Our responsive support team is here 24/7 to guide creators, students, and businesses with quick, reliable help.",
+    img: support, 
+    hoverImg: thumsup, 
+    gradient: { from: '#050a0a', to: '#051818', fromHover: '#05070a', toHover: '#0b1a3b' } 
+  },
+  { 
+    title: 'Pocket Friendly', 
+    hoverTitle: "Say Goodbye to Expensive Subscriptions",
+    desc: "Enjoy unlimited creativity for just ₹349/month. One subscription replaces dozens of costly tools — save big while creating more.",
+    img: money, 
+    hoverImg: sun, 
+    gradient: { from: '#171c35', to: '#000000', fromHover: '#2b131e', toHover: '#141414' } 
+  },
 ];
 
 export default function Support() {
@@ -26,10 +41,10 @@ export default function Support() {
       <div>
         <div className="glow-behind"></div>
         <h1 className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-[1.5]'>
-          Put the light
+          Powerful Features
         </h1>
         <h1 className='pt-3 lg:pt-5 text-blue-100/90 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide'>
-          on the POWER features of all time
+          Trusted by creators, students & businesses worldwide
         </h1>
       </div>
 

@@ -15,18 +15,23 @@ export default function Hero() {
           <div className="glow-behind"></div>
           <h1 className="text-gradient-blue font-extrabold tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)]
                          text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
-            The best premium resources,
+            50+ Premium Platforms, One Subscription.
           </h1>
 
           <p className="pt-4 sm:pt-6 text-blue-100/90 font-normal flex items-center justify-center 
                         drop-shadow-[0_0_12px_rgba(79,134,255,.4)]
                         text-base sm:text-lg md:text-xl">
-            Unlimited Benefits, now for just&nbsp;
-            <FaIndianRupeeSign className="inline -mt-1" />249!
+            Unlimited creativity for just ₹349/month — no hidden fees, cancel anytime.
           </p>
+
           <div className="pt-6 sm:pt-8 md:pt-9">
             <ShinyButton label="Get Instant Access" />
           </div>
+
+          {/* ✅ Micro-trust badge */}
+          <p className="pt-3 text-blue-200/80 text-sm sm:text-base drop-shadow-[0_0_8px_rgba(79,134,255,.3)]">
+            ✅Trusted by creators, students & businesses worldwide.
+          </p>
         </div>
 
         <div className="relative w-full flex justify-center items-center">

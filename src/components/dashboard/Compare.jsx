@@ -11,6 +11,10 @@ const HIGHLIGHTS = [
   'trust',
   'Weekly',
   'Personalised',
+  'Transparent',
+  'Global',
+  'Unlimited',
+  'Support',
 ];
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const H_REGEX = new RegExp(`(${HIGHLIGHTS.map(esc).join('|')})`, 'gi');
@@ -28,24 +32,24 @@ const HighlightedText = ({ text }) =>
   );
 
 export default function Compare() {
-  const brand = 'Pixhub';
+  const brand = 'DesignCrate';
 
   const left = [
-    'No hidden fees. No surprises',
-    'Weekly tools Addition',
-    'Personalised Account Manager',
-    'Provides 24/7 live support',
-    'Payment Partners – PhonePe and Stripe',
-    '7,000+ customers trust Pixhub',
+    'Transparent pricing — No hidden fees, no surprises',
+    'Weekly addition of premium tools for designers, students & businesses',
+    'Dedicated Account Manager for personalised support',
+    'Provides 24/7 live chat & email support',
+    'Trusted Payment Partners – PhonePe, Stripe & UPI',
+    '10,000+ global customers trust DesignCrate',
   ];
 
   const right = [
-    'Hidden costs',
-    'Outdated tools, no progress all year',
-    'Delayed support for limited time',
-    'No payment gateway, delays access',
-    'No reviews, no credibility',
-    'No proper account management',
+    'Hidden fees & confusing billing',
+    'Stale tools with no fresh updates',
+    'Limited support, long response times',
+    'Unreliable payment gateways & delays',
+    'No community, no credibility',
+    'No account management or customer care',
   ];
 
   const Check = () => (
@@ -111,16 +115,15 @@ export default function Compare() {
 
         {/* Grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-          {/* Pixhub card */}
+          {/* DesignCrate card */}
           <div
             role="region"
-            aria-label="Pixhub features"
+            aria-label="DesignCrate features"
             className="relative rounded-3xl border border-transparent conic-border animate-border h-full"
           >
             <div className="rounded-3xl bg-gradient-to-b from-[#0b1224] to-[#070b16] p-6 sm:p-8 lg:p-10 h-full shadow-[0_20px_60px_rgba(0,0,0,.45)]">
-              {/* explicit label */}
               <div className="mb-4 flex items-center justify-between">
-                <Badge tone="blue">Pixhub</Badge>
+                <Badge tone="blue">DesignCrate</Badge>
               </div>
 
               <div className="mb-5 sm:mb-6 flex items-center gap-3">
@@ -143,7 +146,7 @@ export default function Compare() {
             </div>
           </div>
 
-          {/* mobile-only VS separator between cards */}
+          {/* mobile-only VS separator */}
           <MobileVS />
 
           {/* Others card */}
@@ -153,7 +156,6 @@ export default function Compare() {
             className="relative rounded-3xl border border-slate-800/80 bg-gradient-to-b from-[#0b0f1b] to-[#070a12] p-[1px] h-full"
           >
             <div className="rounded-3xl bg-[#090d18] p-6 sm:p-8 lg:p-10 h-full shadow-[0_16px_40px_rgba(0,0,0,.4)]">
-              {/* explicit label */}
               <div className="mb-4 flex items-center justify-between">
                 <Badge tone="slate">Others</Badge>
               </div>
@@ -188,11 +190,6 @@ export default function Compare() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-10 sm:mt-12 flex justify-center">
-          <ShinyButton label="Get Instant Access" />
         </div>
       </div>
     </section>
