@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+
   --bg-black: #000000;
 
   /* Color Palette */
@@ -11,7 +12,7 @@
   --blue-mid: #3b82f6;
   --blue-end: #60a5fa;
 
-  --blue-glow-light: rgba(59, 130, 246, 0.7);
+  --blue-glow-light: rgba(59, 130, 246, 0.702);
   --blue-neon: #3b82f6;
   --purple-neon: #8b5cf6;
 
@@ -22,6 +23,14 @@
 
   --foreground: #ffffff;
   --background: var(--bg-black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: var(--nav-h);
 }
 
 @theme inline {
@@ -185,6 +194,163 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0 26px var(--glow-strong), 0 16px 36px rgba(0, 0, 0, .7);
   filter: saturate(1.05);
+}
+
+.robot-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* gentle up/down forever */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-8px)
+  }
+}
+
+.robot-float {
+  display: block;
+  animation: float 4.6s ease-in-out infinite;
+}
+
+/* purple shade from bottom, same width as robot */
+.halo {
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  /* a touch lower so glow blooms upward */
+  transform: translateX(-50%);
+  width: 108%;
+  /* a bit wider than the robot */
+  height: 38px;
+  /* slightly taller */
+  border-radius: 9999px;
+  pointer-events: none;
+  background:
+    radial-gradient(closest-side,
+      rgba(96, 165, 250, .70) 0%,
+      /* sky blue core */
+      rgba(59, 130, 246, .48) 55%,
+      /* blue */
+      rgba(37, 99, 235, .30) 75%,
+      /* deep blue */
+      transparent 86%);
+  filter: blur(18px);
+  opacity: 0;
+  /* will fade in */
+  animation: haloAppear .8s ease-out forwards,
+    haloPulseBlue 3.8s ease-in-out 1s infinite;
+}
+
+.halo::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 138%;
+  /* extends shine margin a bit */
+  height: 160%;
+  border-radius: 9999px;
+  background:
+    radial-gradient(closest-side,
+      rgba(147, 197, 253, .30) 0%,
+      /* light cyan haze */
+      rgba(59, 130, 246, .20) 55%,
+      rgba(2, 6, 23, 0) 86%);
+  filter: blur(26px);
+  opacity: .85;
+}
+
+/* tiny star specks that twinkle & drift */
+.stars {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 140%;
+  height: 140%;
+  pointer-events: none;
+  mix-blend: screen;
+  background-repeat: no-repeat;
+  opacity: .8;
+  animation: drift 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(96, 165, 250, .45));
+}
+
+.stars--a {
+  background-image:
+    radial-gradient(1.2px 1.2px at 18% 78%, rgba(255, 255, 255, .95) 99%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 64% 82%, rgba(255, 255, 255, .8) 99%, transparent 100%),
+    radial-gradient(1px 1px at 32% 62%, rgba(255, 255, 255, .9) 99%, transparent 100%),
+    radial-gradient(1.4px 1.4px at 78% 58%, rgba(255, 255, 255, .85) 99%, transparent 100%);
+  animation: drift 7s ease-in-out infinite, twinkle 1.8s ease-in-out infinite;
+}
+
+.stars--b {
+  background-image:
+    radial-gradient(1.2px 1.2px at 26% 36%, rgba(255, 255, 255, .9) 99%, transparent 100%),
+    radial-gradient(1px 1px at 72% 28%, rgba(255, 255, 255, .75) 99%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 52% 14%, rgba(255, 255, 255, .9) 99%, transparent 100%);
+  animation: drift 8.2s ease-in-out infinite reverse, twinkle 2.4s ease-in-out infinite .4s;
+}
+
+@keyframes haloAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(.92);
+  }
+
+  to {
+    opacity: .96;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes haloPulseBlue {
+
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: .96;
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.07);
+    opacity: 1;
+  }
+}
+
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: .45
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(-50%, 6px)
+  }
+
+  50% {
+    transform: translate(-50%, -4px)
+  }
+
+  100% {
+    transform: translate(-50%, 6px)
+  }
 }
 
 @keyframes marquee {

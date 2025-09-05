@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ContactSection() {
   return (
-    <div className="relative mx-auto px-4 sm:px-6 lg:px-16 pt-32 md:pt-40 pb-10 sm:pb-16">
+    <div className="relative mx-auto px-4 sm:px-6 lg:px-16 pt-32 md:pt-48 pb-10 sm:pb-24">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{

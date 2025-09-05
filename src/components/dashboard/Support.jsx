@@ -12,7 +12,7 @@ const cardsData = [
   { 
     title: 'Instant Access', 
     hoverTitle: 'Seamless & Instant Accessibility',
-    desc: "Unlock 50+ premium platforms instantly with one subscription. No waiting, no hassle — just pure creativity at your fingertips.",
+    desc: "Unlock 50+ premium platforms instantly with one subscription. No waiting, no hassle - just pure creativity at your fingertips.",
     img: share, 
     hoverImg: done, 
     gradient: { from: '#242424', to: '#020202', fromHover: '#182135', toHover: '#080808' } 
@@ -37,7 +37,7 @@ const cardsData = [
 
 export default function Support() {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div id="service" className='flex flex-col justify-center items-center'>
       <div className='text-center'>
         <div className="glow-behind"></div>
         <h1 className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-[1.5]'>

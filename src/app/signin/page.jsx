@@ -2,48 +2,99 @@
 import React from 'react';
 import Link from 'next/link';
 import AuthShell from '@/components/AuthShell';
+import image from '../../../public/image/image/signin.jpg';
 
 export default function SignInPage() {
   return (
-    <AuthShell page="signin" imageSrc="/images/left-panel.jpg">
-      <p className="mb-4 text-center text-xs text-white/50">or use your email account</p>
+    // change this to any demo image you like, e.g. "/images/demo-auth.jpg"
+    <AuthShell imageSrc={image}>
+      {/* Make the form column match image height + center it */}
+      <div className="min-h-[560px] flex flex-col justify-center">
+        <h2 className="mb-2 text-4xl font-extrabold tracking-tight text-white">Sign in</h2>
+        <p className="mb-4 text-lg text-white/70">Use your email and password to continue.</p>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const data = Object.fromEntries(new FormData(e.currentTarget));
-          console.log('SIGN IN =>', data);
-          alert('Signed in (demo).');
-        }}
-        className="space-y-4"
-      >
-        <label className="block">
-          <div className="mb-2 text-xs font-semibold tracking-wide text-white/60">Email</div>
-          <input name="email" type="email" placeholder="name@example.com" required className="themed-input" autoComplete="email" />
-        </label>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(e.currentTarget));
+            console.log('SIGN IN =>', data);
+            alert('Signed in (demo).');
+          }}
+          className="py-10 space-y-4"
+        >
+          <Field label="Email">
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="name@example.com"
+              className="themed-input"
+              autoComplete="email"
+            />
+          </Field>
 
-        <label className="block">
-          <div className="mb-2 text-xs font-semibold tracking-wide text-white/60">Password</div>
-          <input name="password" type="password" placeholder="••••••••" required className="themed-input" autoComplete="current-password" />
-        </label>
+          <Field label="Password">
+            <input
+              required
+              type="password"
+              name="password"
+              placeholder="••••••••"
+              className="themed-input"
+              autoComplete="current-password"
+            />
+          </Field>
 
-        <div className="mb-1 flex items-center justify-between text-xs">
-          <label className="inline-flex cursor-pointer items-center gap-2 text-white/70">
-            <input type="checkbox" name="remember" className="h-4 w-4 rounded bg-white/10 accent-cyan-400" />
-            Remember me
-          </label>
-          <a href="#" className="text-cyan-300 hover:underline">Forgot password?</a>
-        </div>
+          <div className="mt-10 mb-1 flex items-center justify-end text-base">
+            <a href="#" className="text-white underline">Forgot password?</a>
+          </div>
 
-        <button type="submit" className="w-full rounded-xl bg-cyan-400 py-3 font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(34,211,238,.25)] ring-1 ring-cyan-200/50 hover:brightness-105 active:translate-y-[1px]">
-          SIGN IN
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
+          >
+            SIGN IN
+          </button>
+        </form>
 
-      <p className="mt-4 text-center text-xs text-white/60">
-        Don&apos;t have an account?{' '}
-        <Link href="/signup" className="text-cyan-300 hover:underline">Create one</Link>
-      </p>
+        <p className="mt-4 text-center text-base text-white/60">
+          Don&apos;t have an account?{' '}
+          <Link href="/signup" className="text-white underline">Create one</Link>
+        </p>
+      </div>
+
+      <style jsx>{`
+        .themed-input {
+          width: 100%;
+          border-radius: 0.8rem;
+          background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.03));
+          border: 1px solid rgba(255,255,255,0.08);
+          padding: 0.9rem 1rem;
+          color: #fff;
+          outline: none;
+          transition: box-shadow .25s ease, border-color .25s ease, background .25s ease;
+          box-shadow:
+            inset 0 0 0 1px rgba(255,255,255,0.02),
+            inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+        .themed-input::placeholder { color: rgba(255,255,255,.45); }
+        .themed-input:focus {
+          border-color: rgba(99,102,241,.55);
+          box-shadow:
+            0 0 0 7px rgba(59,130,246,.10),
+            0 0 0 1px rgba(99,102,241,.55) inset,
+            0 12px 32px rgba(59,130,246,.18);
+          background: linear-gradient(180deg, rgba(59,130,246,.06), rgba(59,130,246,.03));
+        }
+      `}</style>
     </AuthShell>
+  );
+}
+
+function Field({ label, children }) {
+  return (
+    <label className="block">
+      <div className="mb-2 text-xs font-semibold tracking-wide text-white/60">{label}</div>
+      {children}
+    </label>
   );
 }

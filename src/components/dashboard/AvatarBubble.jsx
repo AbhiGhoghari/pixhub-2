@@ -39,7 +39,7 @@ import avatar34 from '../../../public/image/avatar/avatar34.jpg';
 import avatar35 from '../../../public/image/avatar/avatar35.jpg';
 import Image from 'next/image';
 
-export default function PixhubCommunity() {
+export default function Community() {
     const avatars = [
         avatar1, avatar2, avatar3, avatar4, avatar5, avatar6,
         avatar7, avatar8, avatar9, avatar10, avatar11, avatar12,
@@ -59,7 +59,7 @@ export default function PixhubCommunity() {
             else if (w >= 1024) setRows(4); // lg
             else if (w >= 768) setRows(2); // md
             else if (w >= 520) setRows(5); // sm
-            else setRows(3);             
+            else setRows(3);
         }
         updateRows();
         window.addEventListener('resize', updateRows);
@@ -79,7 +79,7 @@ export default function PixhubCommunity() {
     );
 
     return (
-        <section className="relative w-full overflow-hidden mt-20 mb-5 md:mb-10">
+        <section className="relative w-full overflow-hidden mt-10 md:mt-20 mb-5 md:mb-10">
             <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0d1224] via-[#0b1020] to-[#090e1a]" />
 
             <div className="w-full h-[45rem] md:h-96">
@@ -87,14 +87,14 @@ export default function PixhubCommunity() {
                     {/* LEFT SIDE TEXT */}
                     <div className="max-w-4xl pt-12 pb-5 md:py-16 sm:ps-8 xl:ps-[12rem] 2xl:ps-[20rem] text-center md:text-left">
                         <div className="inline-flex items-center rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm text-indigo-200/90">
-                            #1 Pixhub Server in the World
+                            #1 DesignCrate Server in the World
                         </div>
                         <h2 className="mt-6 text-[40px] font-bold leading-tight text-white md:w-[75%]">
                             Be part of a <span className="text-gradient-blue">creative</span> community! 🌍
                         </h2>
 
                         <div className="pt-9">
-                            <ShinyButton label="Join Pixhub" />
+                            <ShinyButton label="Join Designcrate" />
                         </div>
                     </div>
 

@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
-import ShinyButton from '../ui/ShinyButton';
+import robot1 from '../../../public/image/png/robot3.webp';
+import robot2 from '../../../public/image/png/robot4.webp';
+import Image from 'next/image';
 
 const HIGHLIGHTS = [
   '24/7',
@@ -35,7 +37,7 @@ export default function Compare() {
   const brand = 'DesignCrate';
 
   const left = [
-    'Transparent pricing — No hidden fees, no surprises',
+    'Transparent pricing - No hidden fees, no surprises',
     'Weekly addition of premium tools for designers, students & businesses',
     'Dedicated Account Manager for personalised support',
     'Provides 24/7 live chat & email support',
@@ -114,13 +116,29 @@ export default function Compare() {
         </div>
 
         {/* Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        <div className="mt-10 sm:mt-0 relative grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {/* DesignCrate card */}
           <div
             role="region"
             aria-label="DesignCrate features"
             className="relative rounded-3xl border border-transparent conic-border animate-border h-full"
           >
+            <div className="absolute right-2 sm:right-8 -top-10 sm:top-10">
+              <div className="robot-wrap">
+                <span className="halo" aria-hidden />
+
+                <span className="stars stars--a" aria-hidden />
+                <span className="stars stars--b" aria-hidden />
+
+                <Image
+                  src={robot2}
+                  width={100}
+                  height={100}
+                  alt="robot"
+                  className="robot-float"
+                />
+              </div>
+            </div>
             <div className="rounded-3xl bg-gradient-to-b from-[#0b1224] to-[#070b16] p-6 sm:p-8 lg:p-10 h-full shadow-[0_20px_60px_rgba(0,0,0,.45)]">
               <div className="mb-4 flex items-center justify-between">
                 <Badge tone="blue">DesignCrate</Badge>
@@ -155,6 +173,22 @@ export default function Compare() {
             aria-label="Other softwares features"
             className="relative rounded-3xl border border-slate-800/80 bg-gradient-to-b from-[#0b0f1b] to-[#070a12] p-[1px] h-full"
           >
+            <div className="absolute right-2 sm:right-8 -top-10 sm:top-10">
+              <div className="robot-wrap">
+                <span className="halo" aria-hidden />
+
+                <span className="stars stars--a" aria-hidden />
+                <span className="stars stars--b" aria-hidden />
+
+                <Image
+                  src={robot1}
+                  width={100}
+                  height={100}
+                  alt="robot"
+                  className="robot-float"
+                />
+              </div>
+            </div>
             <div className="rounded-3xl bg-[#090d18] p-6 sm:p-8 lg:p-10 h-full shadow-[0_16px_40px_rgba(0,0,0,.4)]">
               <div className="mb-4 flex items-center justify-between">
                 <Badge tone="slate">Others</Badge>

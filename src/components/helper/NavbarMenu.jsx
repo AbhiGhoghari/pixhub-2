@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { FiMenu, FiX } from "react-icons/fi";
+import logo from '../../../public/image/logo/logo-white.png';
+import Image from "next/image";
 
 const MenuItem = ({ label, href, onClick }) => {
   return (
@@ -45,10 +47,10 @@ function Navbar({ className }) {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "Service", href: "/#service" },
+    { label: "FAQs", href: "/#faqs" },
     { label: "Contact", href: "/contact" },
-    { label: "Service", href: "/service" },
-    { label: "FAQs", href: "/faqs" },
   ];
 
   return (
@@ -59,9 +61,16 @@ function Navbar({ className }) {
       )}
     >
       <Menu>
-        <div className="text-white font-bold text-xl md:hidden">
-          PixHub
-        </div>
+        <Link href="/" className="flex items-center gap-2" aria-label="Designcrate home">
+          <Image
+            src={logo}
+            alt="Designcrate logo"
+            width={100}
+            height={100}
+            className="w-full h-10"
+            priority
+          />
+        </Link>
 
         <div className="hidden md:flex items-center gap-6">
           {menuItems.map((item) => (

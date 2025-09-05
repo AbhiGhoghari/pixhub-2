@@ -3,13 +3,23 @@ import React from 'react';
 import { Ripple } from '../ui/ripple';
 import { BlueInput } from '../ui/input';
 import { IoIosMail } from "react-icons/io";
+import logo from '../../../public/image/logo/logo-white.png';
+import Image from "next/image";
+import Link from 'next/link';
 
 export function Footer() {
     return (
         <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-gradient-to-b from-[#0b1224] via-[#0a1020] to-[#090e1a]">
-            <p className="pb-5 absolute top-24 z-10 whitespace-pre-wrap text-3xl md:text-5xl font-extrabold tracking-tight text-gradient-blue drop-shadow-[0_0_24px_rgba(59,130,246,.45)]">
-                Pixhub logo
-            </p>
+            <Link href="/" className="flex items-center gap-2" aria-label="Designcrate home">
+                <Image
+                    src={logo}
+                    alt="Designcrate logo"
+                    width={100}
+                    height={100}
+                    className="w-full h-10"
+                    priority
+                />
+            </Link>
             <div className="pt-14">
                 <BlueInput
                     id="email"

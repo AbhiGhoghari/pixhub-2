@@ -35,7 +35,7 @@ const faqs = [
 
 export default function Faqs() {
     return (
-        <div className="pb-10">
+        <div id="faqs" className="pb-5 md:pb-10">
             <div className="text-center py-5 px-4 sm:px-12">
                 <div className="glow-behind"></div>
                 <h1 className="text-center font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-tight
