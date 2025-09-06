@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="text-center relative">
           <div className="glow-behind"></div>
           <h1 className="text-gradient-blue font-extrabold tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)]
-                         text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
+                         text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
             50+ Premium Platforms, <br />One Subscription.
           </h1>
 

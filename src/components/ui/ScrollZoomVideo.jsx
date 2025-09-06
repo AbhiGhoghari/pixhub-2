@@ -15,10 +15,10 @@ export default function ScrollZoomVideo({ videoUrl }) {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center mt-16 lg:mt-20 z-40">
+    <div className="w-full flex justify-center items-center mt-10 z-40">
       <video
         ref={videoRef}
-        className="transition-transform duration-300 ease-out w-3/4 max-w-3xl rounded-3xl neon-frame"
+        className="transition-transform duration-300 ease-out w-3/4 max-w-2xl rounded-3xl neon-frame"
         src={videoUrl}
         autoPlay loop muted playsInline
       />

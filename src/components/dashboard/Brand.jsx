@@ -129,7 +129,7 @@ export default function Brand() {
               </div>
 
               {/* MOBILE: horizontal scroller */}
-              <div className="-mx-6 sm:hidden overflow-x-auto no-scrollbar px-6">
+              <div className="-mx-6 sm:hidden overflow-x-auto overflow-y-hidden no-scrollbar px-6">
                 <div className="flex gap-4 snap-x snap-mandatory">
                   {group.brands.map((app, i) => (
                     <motion.a
@@ -139,16 +139,24 @@ export default function Brand() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-20% 0px -10% 0px' }}
                       transition={{ delay: (i % 10) * 0.03, ease: 'easeOut' }}
-                      className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(34,211,238,.18)] min-w-[168px] snap-start"
+                      className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm min-w-[168px] snap-start transition-transform duration-300 ease-out"
                     >
-                      <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3">
-                        <Image src={app.src} alt={app.label} width={140} height={140} className="w-auto h-24 object-contain rounded-xl" priority={gIdx < 1} />
+                      <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3 overflow-hidden">
+                        <Image
+                          src={app.src}
+                          alt={app.label}
+                          width={140}
+                          height={140}
+                          className="w-auto h-24 object-contain rounded-xl transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] will-change-transform"
+                          priority={gIdx < 1}
+                        />
                       </div>
                       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 translate-y-1/2 bg-gradient-to-t from-cyan-400/10 to-transparent blur-xl" />
                     </motion.a>
                   ))}
                 </div>
               </div>
+
 
               {/* DESKTOP: grid */}
               <div className="hidden sm:grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7">
@@ -160,15 +168,23 @@ export default function Brand() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-20% 0px -10% 0px' }}
                     transition={{ delay: (i % 10) * 0.03, ease: 'easeOut' }}
-                    className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(34,211,238,.18)]"
+                    className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm transition-transform duration-300 ease-out will-change-transform sm:hover:-translate-y-1 sm:hover:shadow-[0_18px_60px_rgba(34,211,238,.18)]"
                   >
-                    <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3">
-                      <Image src={app.src} alt={app.label} width={140} height={140} className="w-auto h-24 object-contain rounded-xl" priority={gIdx < 1} />
+                    <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3 overflow-hidden">
+                      <Image
+                        src={app.src}
+                        alt={app.label}
+                        width={140}
+                        height={140}
+                        className="w-auto h-24 object-contain rounded-xl transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] sm:group-hover:-translate-y-1.5 md:group-hover:-translate-y-2 will-change-transform"
+                        priority={gIdx < 1}
+                      />
                     </div>
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 translate-y-1/2 bg-gradient-to-t from-cyan-400/10 to-transparent blur-xl" />
                   </motion.a>
                 ))}
               </div>
+
             </div>
           ))}
         </div>
