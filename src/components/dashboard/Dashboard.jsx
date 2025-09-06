@@ -16,9 +16,9 @@ export default function Dashboard() {
       <MobilePricingCTA />
       <Hero />
       <Brand />
-      <Support />
       <Pricing />
       <Compare />
+      <Support />
       <Community />
       <Faqs />
     </div>
