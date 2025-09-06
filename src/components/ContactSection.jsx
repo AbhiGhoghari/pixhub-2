@@ -39,7 +39,7 @@ export default function ContactSection() {
             <ContactCard
               icon={<MailIcon />}
               title="Email us"
-              subtitle="support@pixhub.in"
+              subtitle="support@designcrate.in"
             />
             <ContactCard
               icon={<PhoneIcon />}

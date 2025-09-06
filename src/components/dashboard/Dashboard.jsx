@@ -25,8 +25,30 @@ export default function Dashboard() {
   );
 }
 
-
 function MobilePricingCTA() {
+  const [hidden, setHidden] = React.useState(false);
+
+  React.useEffect(() => {
+    const el = document.getElementById('pricing');
+    if (!el) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Once we've reached pricing, hide permanently this session
+          setHidden(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.06 } // hide when ~6% of pricing is visible
+    );
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  if (hidden) return null;
+
   return (
     <a
       href="#pricing"

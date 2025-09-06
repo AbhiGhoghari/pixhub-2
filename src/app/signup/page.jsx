@@ -10,7 +10,7 @@ export default function SignUpPage() {
       {/* Match image height + center content */}
       <div className="h-full py-10 flex flex-col justify-center">
         <h2 className="mb-2 text-4xl font-extrabold tracking-tight text-white">Create account</h2>
-        <p className="mb-4 text-lg text-white/70">Join Pixhub in seconds.</p>
+        <p className="mb-4 text-lg text-white/70">Join Design Crate in seconds.</p>
 
         <form
           onSubmit={(e) => {
