@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from '../../../public/image/logo/logo-white.png';
+import logo from '../../../public/image/logo/full-logo.png';
 import Image from "next/image";
 
 const MenuItem = ({ label, href, onClick }) => {
@@ -67,7 +67,7 @@ function Navbar({ className }) {
             alt="Designcrate logo"
             width={100}
             height={100}
-            className="w-full h-10"
+            className="w-full h-11"
             priority
           />
         </Link>

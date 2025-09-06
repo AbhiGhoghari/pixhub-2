@@ -9,9 +9,9 @@ export default function Pricing() {
         {
             key: 'monthly',
             title: 'Monthly Plan',
-            price: '399',
+            price: '349',
             per: '',
-            billedNow: '399',
+            billedNow: '349',
             billedOriginal: null,
             saveText: null,
             badge: null,
