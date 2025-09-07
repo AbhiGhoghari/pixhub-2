@@ -2,16 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import AuthShell from '@/components/AuthShell';
-import image from '../../../public/image/image/signin.jpg';
 
 export default function SignInPage() {
   return (
-    // change this to any demo image you like, e.g. "/images/demo-auth.jpg"
-    <AuthShell imageSrc={image}>
-      {/* Make the form column match image height + center it */}
-      <div className="min-h-[560px] flex flex-col justify-center">
+    <AuthShell>
+      <div className="h-full flex flex-col justify-center">
         <h2 className="mb-2 text-4xl font-extrabold tracking-tight text-white">Sign in</h2>
-        <p className="mb-4 text-lg text-white/70">Use your email and password to continue.</p>
+        <p className="mb-4 text-base text-white/70">Use your email and password to continue.</p>
 
         <form
           onSubmit={(e) => {
@@ -20,7 +17,7 @@ export default function SignInPage() {
             console.log('SIGN IN =>', data);
             alert('Signed in (demo).');
           }}
-          className="py-10 space-y-4"
+          className="py-5 space-y-4"
         >
           <Field label="Email">
             <input
@@ -44,19 +41,15 @@ export default function SignInPage() {
             />
           </Field>
 
-          <div className="mt-10 mb-1 flex items-center justify-end text-base">
-            <a href="#" className="text-white underline">Forgot password?</a>
-          </div>
-
           <button
             type="submit"
-            className="w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
+            className="mt-5 w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
           >
             SIGN IN
           </button>
         </form>
 
-        <p className="mt-4 text-center text-base text-white/60">
+        <p className="mt-4 text-center text-sm text-white/60">
           Don&apos;t have an account?{' '}
           <Link href="/signup" className="text-white underline">Create one</Link>
         </p>

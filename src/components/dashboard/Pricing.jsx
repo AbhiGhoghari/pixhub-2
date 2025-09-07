@@ -1,10 +1,14 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import Image from 'next/image';
 import robot from '../../../public/image/png/robot2.webp';
+import PurchaseModal from '../checkout/PurchaseModal';
 
 export default function Pricing() {
+    const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
+
     const plans = [
         { key: 'monthly', title: 'Monthly Plan', price: '349', per: '', billedNow: '349', billedOriginal: null, saveText: null, badge: null, selected: true },
         { key: 'quarterly', title: '3 Month Plan', price: '299', per: '/month', billedNow: '899', billedOriginal: '1197', saveText: 'Save 25%', badge: null },
@@ -101,8 +105,8 @@ export default function Pricing() {
                                     <div className="pt-8 mt-auto">
                                         <button
                                             type="button"
-                                            onClick={() => console.log('BUY_NOW', p.key)}
-                                            className="w-full rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 py-2.5 text-sm font-semibold text-white ring-1 ring-indigo-400/30 shadow-[0_10px_30px_rgba(59,130,246,.35)] hover:brightness-110 active:translate-y-[1px] transition"
+                                            onClick={() => { setSelected(p); setOpen(true); }}
+                                            className="w-full rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 py-2.5 text-sm font-semibold text-white ring-1 ring-indigo-400/30 shadow-[0_10px_30px_rgba(59,130,246,.35)] hover:brightness-110 active:translate-y-[1px] transition cursor-pointer"
                                             aria-label={`Buy ${p.title}`}
                                         >
                                             Buy Now
@@ -115,6 +119,8 @@ export default function Pricing() {
                     ))}
                 </div>
             </div>
+
+            <PurchaseModal open={open} onClose={() => setOpen(false)} plan={selected} />
 
             {/* blue spotlights */}
             <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-cyan-400/15 blur-3xl" />

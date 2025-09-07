@@ -37,18 +37,18 @@ const cardsData = [
 
 export default function Support() {
   return (
-    <div id="service" className='flex flex-col justify-center items-center'>
+    <div id="service" className='pt-10 flex flex-col justify-center items-center'>
       <div className='text-center'>
         <div className="glow-behind"></div>
         <h1 className='text-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-gradient-blue tracking-wide drop-shadow-[0_0_28px_rgba(79,134,255,.55)] leading-[1.5]'>
           Powerful Features
         </h1>
-        <h1 className='pt-3 lg:pt-5 text-blue-100/90 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-wide'>
+        <h1 className='pt-3 text-blue-100/90 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-wide'>
           Trusted by creators, students & businesses worldwide
         </h1>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 xl:gap-10 py-12 sm:py-16 lg:py-20 px-5 sm:px-8 xl:px-10 2xl:px-32">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 xl:gap-10 pt-12 sm:pt-16 lg:pt-20 px-5 sm:px-8 xl:px-10 2xl:px-32">
         {cardsData.map((c, i) => {
           const isLast = i === cardsData.length - 1;
           return (

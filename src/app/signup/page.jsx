@@ -2,26 +2,26 @@
 import React from 'react';
 import Link from 'next/link';
 import AuthShell from '@/components/AuthShell';
-import image from '../../../public/image/image/signup.jpg'; 
 
-export default function SignUpPage() {
+export default function SignInPage() {
   return (
-    <AuthShell imageSrc={image}>
-      {/* Match image height + center content */}
-      <div className="h-full py-10 flex flex-col justify-center">
+    // change this to any demo image you like, e.g. "/images/demo-auth.jpg"
+    <AuthShell>
+      {/* Make the form column match image height + center it */}
+      <div className="h-full flex flex-col justify-center">
         <h2 className="mb-2 text-4xl font-extrabold tracking-tight text-white">Create account</h2>
-        <p className="mb-4 text-lg text-white/70">Join Design Crate in seconds.</p>
+        <p className="mb-4 text-base text-white/70">Join Design Crate in seconds.</p>
 
         <form
           onSubmit={(e) => {
             e.preventDefault();
             const data = Object.fromEntries(new FormData(e.currentTarget));
-            console.log('SIGN UP =>', data);
-            alert('Signed up (demo).');
+            console.log('SIGN IN =>', data);
+            alert('Signed in (demo).');
           }}
-          className="py-10 space-y-4"
+          className="py-5 space-y-4"
         >
-          <Field label="Full name">
+            <Field label="Full name">
             <input
               required
               name="name"
@@ -66,13 +66,13 @@ export default function SignUpPage() {
 
           <button
             type="submit"
-            className="mt-10 w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
+            className="mt-5 w-full rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0b1020] shadow-[0_10px_30px_rgba(255,255,255,.08)] ring-1 ring-white/40 hover:brightness-[1.03] active:translate-y-[1px] transition"
           >
             CREATE ACCOUNT
           </button>
         </form>
 
-        <p className="mt-4 text-center text-base text-white/60">
+        <p className="mt-4 text-center text-sm text-white/60">
           Already have an account?{' '}
           <Link href="/signin" className="text-white underline">Sign in</Link>
         </p>
