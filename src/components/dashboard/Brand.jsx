@@ -100,26 +100,14 @@ const sections = [
   },
 ];
 
+/* ...your existing imports & sections stay the same... */
+
 export default function Brand() {
   return (
     <section id="brand" className="relative isolate overflow-hidden pt-20 sm:pt-28 lg:pt-40 pb-20">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Header with robot halo */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="relative mx-auto flex items-center justify-center">
-            <div className="robot-wrap">
-              <span className="halo" aria-hidden />
-              <span className="stars stars--a" aria-hidden />
-              <span className="stars stars--b" aria-hidden />
-              <Image src={robot} width={100} height={100} alt="robot" className="robot-float" />
-            </div>
-          </div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-white sm:text-5xl">
-            Your favorite <span className="text-gradient-blue drop-shadow-[0_0_28px_rgba(79,134,255,.55)]">platforms</span>, <br />in <span className="text-gradient-blue drop-shadow-[0_0_28px_rgba(79,134,255,.55)]">one</span> place
-          </h2>
-        </div>
+        {/* ...header stuff... */}
 
-        {/* Groups */}
         <div className="mt-14 space-y-14">
           {sections.map((group, gIdx) => (
             <div key={group.title} className="relative">
@@ -128,37 +116,12 @@ export default function Brand() {
                 <div className="h-px flex-1 ml-6 bg-gradient-to-r from-cyan-400/30 via-white/10 to-transparent" />
               </div>
 
-              {/* MOBILE: horizontal scroller */}
-              <div className="-mx-6 sm:hidden overflow-x-auto overflow-y-hidden no-scrollbar px-6">
-                <div className="flex gap-4 snap-x snap-mandatory">
-                  {group.brands.map((app, i) => (
-                    <motion.a
-                      key={app.label + i}
-                      href="#"
-                      initial={{ opacity: 0, y: 12 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: '-20% 0px -10% 0px' }}
-                      transition={{ delay: (i % 10) * 0.03, ease: 'easeOut' }}
-                      className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm min-w-[168px] snap-start transition-transform duration-300 ease-out"
-                    >
-                      <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3 overflow-hidden">
-                        <Image
-                          src={app.src}
-                          alt={app.label}
-                          width={140}
-                          height={140}
-                          className="w-auto h-24 object-contain rounded-xl transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] will-change-transform"
-                          priority={gIdx < 1}
-                        />
-                      </div>
-                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 translate-y-1/2 bg-gradient-to-t from-cyan-400/10 to-transparent blur-xl" />
-                    </motion.a>
-                  ))}
-                </div>
+              {/* MOBILE: infinite marquee */}
+              <div className="sm:hidden">
+                <MarqueeRow brands={group.brands} reverse={gIdx % 2 === 1} speed={18} />
               </div>
 
-
-              {/* DESKTOP: grid */}
+              {/* DESKTOP: grid (unchanged) */}
               <div className="hidden sm:grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7">
                 {group.brands.map((app, i) => (
                   <motion.a
@@ -184,31 +147,78 @@ export default function Brand() {
                   </motion.a>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
       </div>
 
-      {/* Scoped + tiny global styles */}
-      <style jsx>{`
-        .text-gradient-blue{background:linear-gradient(90deg,#60a5fa,#3b82f6,#6366f1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-        .robot-wrap{position:relative;display:inline-block}
-        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-        .robot-float{display:block;animation:float 4.6s ease-in-out infinite}
-        /* blue halo (subtle, same pattern as earlier) */
-        .halo{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);width:108%;height:38px;border-radius:9999px;pointer-events:none;background:radial-gradient(closest-side,rgba(96,165,250,.70) 0%,rgba(59,130,246,.48) 55%,rgba(37,99,235,.30) 75%,transparent 86%);filter:blur(18px);opacity:.96}
-        .halo::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:138%;height:160%;border-radius:9999px;background:radial-gradient(closest-side,rgba(147,197,253,.30) 0%,rgba(59,130,246,.20) 55%,rgba(2,6,23,0) 86%);filter:blur(26px);opacity:.85}
-        /* stars around robot */
-        .stars{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);width:140%;height:140%;pointer-events:none;mix-blend:screen;background-repeat:no-repeat;opacity:.8;filter:drop-shadow(0 0 6px rgba(96,165,250,.45))}
-        .stars--a{background-image:radial-gradient(1.2px 1.2px at 18% 78%, rgba(255,255,255,.95) 99%, transparent 100%),radial-gradient(1.3px 1.3px at 64% 82%, rgba(255,255,255,.8) 99%, transparent 100%),radial-gradient(1px 1px at 32% 62%, rgba(255,255,255,.9) 99%, transparent 100%),radial-gradient(1.4px 1.4px at 78% 58%, rgba(255,255,255,.85) 99%, transparent 100%)}
-        .stars--b{background-image:radial-gradient(1.2px 1.2px at 26% 36%, rgba(255,255,255,.9) 99%, transparent 100%),radial-gradient(1px 1px at 72% 28%, rgba(255,255,255,.75) 99%, transparent 100%),radial-gradient(1.3px 1.3px at 52% 14%, rgba(255,255,255,.9) 99%, transparent 100%)}
-      `}</style>
+      {/* keep your existing styles... */}
+
+      {/* ⬇️ Add these global styles for the marquee */}
       <style jsx global>{`
-        /* hide mobile scrollbars for brand carousels */
-        .no-scrollbar::-webkit-scrollbar{display:none}
-        .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+        @keyframes brand-marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); } /* duplicated once => -50% loops perfectly */
+        }
+        .m-row {
+          position: relative;
+          overflow: hidden;
+          /* nice edge fade */
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .m-track {
+          display: flex;
+          gap: 16px;
+          width: max-content;
+          padding: 8px 0;
+          animation: brand-marquee var(--speed, 18s) linear infinite;
+          will-change: transform;
+        }
+        .m-track.reverse { animation-direction: reverse; }
+        @media (prefers-reduced-motion: reduce) {
+          .m-track { animation: none; }
+        }
       `}</style>
     </section>
   );
 }
+
+/* ===== marquee component for mobile ===== */
+function MarqueeRow({
+  brands,
+  speed = 18,          // seconds; lower = faster
+  reverse = false,     // alternate direction per section
+}) {
+  // duplicate once to create a seamless loop
+  const reel = [...brands, ...brands];
+
+  return (
+    <div className="m-row -mx-6 px-6">
+      <div
+        className={`m-track ${reverse ? 'reverse' : ''}`}
+        style={{ '--speed': `${speed}s` }}
+      >
+        {reel.map((app, i) => (
+          <a
+            key={app.label + i}
+            href="#"
+            className="group relative overflow-hidden rounded-2xl conic-border border border-transparent animate-border bg-white/[.05] ring-1 ring-white/10 backdrop-blur-sm min-w-[168px]"
+          >
+            <div className="relative grid h-28 place-items-center rounded-2xl text-[#0b1020] shadow-[inset_0_1px_0_rgba(0,0,0,.02),0_10px_30px_rgba(0,0,0,.25)] m-3 overflow-hidden">
+              <Image
+                src={app.src}
+                alt={app.label}
+                width={140}
+                height={140}
+                className="w-auto h-24 object-contain rounded-xl"
+              />
+            </div>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 translate-y-1/2 bg-gradient-to-t from-cyan-400/10 to-transparent blur-xl" />
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
