@@ -4,15 +4,15 @@ import React from 'react';
 export default function Privacy() {
     const sections = [
         { id: 'intro', title: '1) Introduction' },
-        { id: 'collect', title: '2) Information We Collect' },
-        { id: 'use', title: '3) How We Use Your Information' },
-        { id: 'share', title: '4) Sharing Your Information' },
-        { id: 'security', title: '5) Data Security' },
-        { id: 'rights', title: '6) Your Rights' },
-        { id: 'changes', title: '7) Changes to This Policy' },
-        { id: 'cookies', title: '8) Cookies and Tracking Technologies' },
-        { id: 'business', title: '9) Business Name' },
-        { id: 'contact', title: '10) Contact Us' },
+        { id: 'collection', title: '2) Collection' },
+        { id: 'usage', title: '3) Usage' },
+        { id: 'sharing', title: '4) Sharing' },
+        { id: 'security', title: '5) Security Precautions' },
+        { id: 'data-retention', title: '6) Data Deletion and Retention' },
+        { id: 'rights', title: '7) Your Rights' },
+        { id: 'consent', title: '8) Consent' },
+        { id: 'changes', title: '9) Changes to This Privacy Policy' },
+        { id: 'grievance', title: '10) Grievance Officer' },
     ];
 
     return (
@@ -77,61 +77,166 @@ export default function Privacy() {
                     <main className="space-y-6">
                         <ArticleCard id="intro" title="1) Introduction">
                             <p>
-                                Welcome to Design Crate. Your privacy is critically important to us. This Privacy Policy explains what personal information we collect, how we use it, and your choices regarding your data.
+                                This Privacy Policy describes how HARJIBHAI S MANIYA and its affiliates (collectively "HARJIBHAI S MANIYA, we, our, us") collect, use, share, protect or otherwise process your information/personal data through our website https://www.designcrate.in/ (hereinafter referred to as Platform).
+                            </p>
+                            <p>
+                                Please note that you may be able to browse certain sections of the Platform without registering with us. We do not offer any product/service under this Platform outside India and your personal data will primarily be stored and processed in India.
+                            </p>
+                            <p>
+                                By visiting this Platform, providing your information or availing any product/service offered on the Platform, you expressly agree to be bound by the terms and conditions of this Privacy Policy, the Terms of Use and the applicable service/product terms and conditions, and agree to be governed by the laws of India including but not limited to the laws applicable to data protection and privacy.
+                            </p>
+                            <p>
+                                <strong>If you do not agree please do not use or access our Platform.</strong>
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="collect" title="2) Information We Collect">
+                        <ArticleCard id="collection" title="2) Collection">
+                            <p>
+                                We collect your personal data when you use our Platform, services or otherwise interact with us during the course of our relationship and related information provided from time to time.
+                            </p>
+                            <p>
+                                Some of the information that we may collect includes but is not limited to:
+                            </p>
                             <ul className="list-disc pl-5 space-y-2">
-                                <li>Personal Information: Name, email address, and payment details for subscriptions.</li>
-                                <li>Usage Data: Information about your visits to our site, such as pages viewed, IP address, and browser type.</li>
+                                <li>Personal data/information provided to us during sign-up/registering or using our Platform such as name, date of birth, address, telephone/mobile number, email ID</li>
+                                <li>Any such information shared as proof of identity or address</li>
+                                <li>Bank account or credit or debit card or other payment instrument information (with your consent)</li>
+                                <li>Biometric information such as your facial features or physiological information (in order to enable use of certain features when opted for, available on the Platform)</li>
                             </ul>
+                            <p>
+                                You always have the option to not provide information, by choosing not to use a particular service or feature on the Platform.
+                            </p>
+                            <p>
+                                We may track your behaviour, preferences, and other information that you choose to provide on our Platform. This information is compiled and analysed on an aggregated basis.
+                            </p>
+                            <p>
+                                <strong>Security Notice:</strong> If you receive an email, a call from a person/association claiming to be HARJIBHAI S MANIYA seeking any personal data like debit/credit card PIN, net-banking or mobile banking password, we request you to never provide such information. If you have already revealed such information, report it immediately to an appropriate law enforcement agency.
+                            </p>
                         </ArticleCard>
 
-                        <ArticleCard id="use" title="3) How We Use Your Information">
-                            <p>We use your data to:</p>
+                        <ArticleCard id="usage" title="3) Usage">
+                            <p>
+                                We use personal data to provide the services you request. To the extent we use your personal data to market to you, we will provide you the ability to opt-out of such uses.
+                            </p>
+                            <p>
+                                We use your personal data to:
+                            </p>
                             <ul className="list-disc pl-5 space-y-2">
-                                <li>Provide and improve our services.</li>
-                                <li>Process payments and manage subscriptions.</li>
-                                <li>Communicate updates, offers, and service notifications.</li>
+                                <li>Assist sellers and business partners in handling and fulfilling orders</li>
+                                <li>Enhance customer experience</li>
+                                <li>Resolve disputes and troubleshoot problems</li>
+                                <li>Inform you about online and offline offers, products, services, and updates</li>
+                                <li>Customise your experience</li>
+                                <li>Detect and protect us against error, fraud and other criminal activity</li>
+                                <li>Enforce our terms and conditions</li>
+                                <li>Conduct marketing research, analysis and surveys</li>
                             </ul>
-                        </ArticleCard>
-
-                        <ArticleCard id="share" title="4) Sharing Your Information">
                             <p>
-                                We do not sell or rent your data. We may share information with trusted third-party services for payment processing, analytics, or when required by law.
+                                You understand that your access to these products/services may be affected in the event permission is not provided to us.
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="security" title="5) Data Security">
+                        <ArticleCard id="sharing" title="4) Sharing">
                             <p>
-                                We use industry-standard security measures to protect your information. However, no method of transmission over the internet is entirely secure.
+                                We may share your personal data internally within our group entities, our other corporate entities, and affiliates to provide you access to the services and products offered by them. These entities and affiliates may market to you as a result of such sharing unless you explicitly opt-out.
+                            </p>
+                            <p>
+                                We may disclose personal data to third parties such as:
+                            </p>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>Sellers and business partners</li>
+                                <li>Third party service providers including logistics partners</li>
+                                <li>Prepaid payment instrument issuers</li>
+                                <li>Third-party reward programs and other payment opted by you</li>
+                            </ul>
+                            <p>
+                                These disclosures may be required for us to provide you access to our services and products offered to you, to comply with our legal obligations, to enforce our user agreement, to facilitate our marketing and advertising activities, to prevent, detect, mitigate, and investigate fraudulent or illegal activities related to our services.
+                            </p>
+                            <p>
+                                We may disclose personal and sensitive personal data to government agencies or other authorised law enforcement agencies if required to do so by law or in the good faith belief that such disclosure is reasonably necessary to respond to subpoenas, court orders, or other legal process.
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="rights" title="6) Your Rights">
+                        <ArticleCard id="security" title="5) Security Precautions">
                             <p>
-                                You have the right to access, correct, or delete your personal data. Contact us at support@designcrate.in to exercise these rights.
+                                To protect your personal data from unauthorised access or disclosure, loss or misuse we adopt reasonable security practices and procedures. Once your information is in our possession or whenever you access your account information, we adhere to our security guidelines to protect it against unauthorised access and offer the use of a secure server.
+                            </p>
+                            <p>
+                                However, the transmission of information is not completely secure for reasons beyond our control. By using the Platform, the users accept the security implications of data transmission over the internet and the World Wide Web which cannot always be guaranteed as completely secure, and therefore, there would always remain certain inherent risks regarding use of the Platform.
+                            </p>
+                            <p>
+                                <strong>Users are responsible for ensuring the protection of login and password records for their account.</strong>
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="changes" title="7) Changes to This Policy">
+                        <ArticleCard id="data-retention" title="6) Data Deletion and Retention">
                             <p>
-                                We may update this Privacy Policy. Please check this page periodically for changes.
+                                You have an option to delete your account by visiting your profile and settings on our Platform, this action would result in you losing all information related to your account. You may also write to us at the contact information provided below to assist you with these requests.
+                            </p>
+                            <p>
+                                We may in event of any pending grievance, claims, pending shipments or any other services we may refuse or delay deletion of the account. Once the account is deleted, you will lose access to the account.
+                            </p>
+                            <p>
+                                We retain your personal data information for a period no longer than is required for the purpose for which it was collected or as required under any applicable law. However, we may retain data related to you if we believe it may be necessary to prevent fraud or future abuse or for other legitimate purposes.
+                            </p>
+                            <p>
+                                We may continue to retain your data in anonymised form for analytical and research purposes.
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="cookies" title="8) Cookies and Tracking Technologies">
-                            <p>We respect your privacy and are committed to providing a user-friendly experience. Our website/application does not use cookies to track, store, or manage user data.</p>
-                        </ArticleCard>
-                        <ArticleCard id="business" title="9) Business Name">
-                            <p>This website is managed by harjibhai S maniya</p>
-                        </ArticleCard>
-                        <ArticleCard id="contact" title="10) Contact Us">
+                        <ArticleCard id="rights" title="7) Your Rights">
                             <p>
-                                If you have questions or concerns about this Privacy Policy, contact us at Handled By support@designcrate.in.
+                                You may access, rectify, and update your personal data directly through the functionalities provided on the Platform.
                             </p>
-                            <p>Thank you for trusting Design Crate. Your privacy matters to us.</p>
+                        </ArticleCard>
+
+                        <ArticleCard id="consent" title="8) Consent">
+                            <p>
+                                By visiting our Platform or by providing your information, you consent to the collection, use, storage, disclosure and otherwise processing of your information on the Platform in accordance with this Privacy Policy.
+                            </p>
+                            <p>
+                                If you disclose to us any personal data relating to other people, you represent that you have the authority to do so and permit us to use the information in accordance with this Privacy Policy.
+                            </p>
+                            <p>
+                                You, while providing your personal data over the Platform or any partner platforms or establishments, consent to us (including our other corporate entities, affiliates, lending partners, technology partners, marketing channels, business partners and other third parties) to contact you through SMS, instant messaging apps, call and/or e-mail for the purposes specified in this Privacy Policy.
+                            </p>
+                            <p>
+                                You have an option to withdraw your consent that you have already provided by writing to the Grievance Officer at the contact information provided below. Please mention "Withdrawal of consent for processing personal data" in your subject line of your communication.
+                            </p>
+                            <p>
+                                In the event you withdraw consent given to us under this Privacy Policy, we reserve the right to restrict or deny the provision of our services for which we consider such information to be necessary.
+                            </p>
+                        </ArticleCard>
+
+                        <ArticleCard id="changes" title="9) Changes to This Privacy Policy">
+                            <p>
+                                Please check our Privacy Policy periodically for changes. We may update this Privacy Policy to reflect changes to our information practices.
+                            </p>
+                            <p>
+                                We may alert/notify you about the significant changes to the Privacy Policy, in the manner as may be required under applicable laws.
+                            </p>
+                        </ArticleCard>
+
+                        <ArticleCard id="grievance" title="10) Grievance Officer">
+                            <div className="space-y-4">
+                                <div>
+                                    <p><strong>Name of the Officer:</strong> Krinit</p>
+                                    <p><strong>Designation:</strong> CEO</p>
+                                </div>
+                                
+                                <div>
+                                    <p><strong>Company Address:</strong></p>
+                                    <p>6TH, 608, ELEPHANTA BUSINESS HUB<br />
+                                    SINGANPOR ROAD, KATARGAM<br />
+                                    SURAT, Gujarat, 395004</p>
+                                </div>
+                                
+                                <div>
+                                    <p><strong>Contact Details:</strong></p>
+                                    <p>Phone: [Phone Number]<br />
+                                    Time: Monday - Friday (9:00 - 18:00)</p>
+                                </div>
+                            </div>
                         </ArticleCard>
 
                         {/* Back to top */}
