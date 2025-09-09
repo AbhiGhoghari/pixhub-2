@@ -125,7 +125,7 @@ export default function Privacy() {
                             <p>We respect your privacy and are committed to providing a user-friendly experience. Our website/application does not use cookies to track, store, or manage user data.</p>
                         </ArticleCard>
                         <ArticleCard id="business" title="9) Business Name">
-                            <p>This website is managed by harjibhai S. maniya</p>
+                            <p>This website is managed by harjibhai S maniya</p>
                         </ArticleCard>
                         <ArticleCard id="contact" title="10) Contact Us">
                             <p>
