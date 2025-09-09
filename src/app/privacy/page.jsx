@@ -233,7 +233,7 @@ export default function Privacy() {
                                 
                                 <div>
                                     <p><strong>Contact Details:</strong></p>
-                                    <p>Phone: [Phone Number]<br />
+                                    <p>Phone: 9574297123<br />
                                     Time: Monday - Friday (9:00 - 18:00)</p>
                                 </div>
                             </div>
