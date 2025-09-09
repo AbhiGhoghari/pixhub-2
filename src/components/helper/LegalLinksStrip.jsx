@@ -8,6 +8,7 @@ export default function LegalLinksStrip() {
         { href: '/privacy', label: 'Privacy Policy' },
         { href: '/terms', label: 'Terms & Conditions' },
         { href: '/dmca', label: 'DMCA' },
+        { href: '/refund', label: 'Refund Policy' },
     ];
     const year = new Date().getFullYear();
 
