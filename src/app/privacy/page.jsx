@@ -111,7 +111,7 @@ export default function Privacy() {
 
                         <ArticleCard id="rights" title="6) Your Rights">
                             <p>
-                                You have the right to access, correct, or delete your personal data. Contact us at support@designcrate.com to exercise these rights.
+                                You have the right to access, correct, or delete your personal data. Contact us at support@designcrate.in to exercise these rights.
                             </p>
                         </ArticleCard>
 
@@ -129,7 +129,7 @@ export default function Privacy() {
                         </ArticleCard>
                         <ArticleCard id="contact" title="10) Contact Us">
                             <p>
-                                If you have questions or concerns about this Privacy Policy, contact us at Handled By nyssupport@designcrate.com.
+                                If you have questions or concerns about this Privacy Policy, contact us at Handled By support@designcrate.in.
                             </p>
                             <p>Thank you for trusting Design Crate. Your privacy matters to us.</p>
                         </ArticleCard>
