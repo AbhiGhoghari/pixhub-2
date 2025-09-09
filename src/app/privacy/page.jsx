@@ -11,7 +11,8 @@ export default function Privacy() {
         { id: 'rights', title: '6) Your Rights' },
         { id: 'changes', title: '7) Changes to This Policy' },
         { id: 'cookies', title: '8) Cookies and Tracking Technologies' },
-        { id: 'contact', title: '9) Contact Us' },
+        { id: 'business', title: '9) Business Name' },
+        { id: 'contact', title: '10) Contact Us' },
     ];
 
     return (
@@ -123,8 +124,10 @@ export default function Privacy() {
                         <ArticleCard id="cookies" title="8) Cookies and Tracking Technologies">
                             <p>We respect your privacy and are committed to providing a user-friendly experience. Our website/application does not use cookies to track, store, or manage user data.</p>
                         </ArticleCard>
-
-                        <ArticleCard id="contact" title="9) Contact Us">
+                        <ArticleCard id="business" title="9) Business Name">
+                            <p>This website is managed by harjibhai S. maniya</p>
+                        </ArticleCard>
+                        <ArticleCard id="contact" title="10) Contact Us">
                             <p>
                                 If you have questions or concerns about this Privacy Policy, contact us at Handled By nyssupport@designcrate.com.
                             </p>
