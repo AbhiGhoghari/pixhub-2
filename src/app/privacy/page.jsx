@@ -220,7 +220,7 @@ export default function Privacy() {
                         <ArticleCard id="grievance" title="10) Grievance Officer">
                             <div className="space-y-4">
                                 <div>
-                                    <p><strong>Name of the Officer:</strong> Krinit</p>
+                                    <p><strong>Name of the Officer:</strong> HARJIBHAI S MANIYA</p>
                                     <p><strong>Designation:</strong> CEO</p>
                                 </div>
                                 
