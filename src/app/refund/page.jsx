@@ -83,6 +83,10 @@ export default function Refund() {
                                 <strong>6.</strong> AI-related features vary by plan. Ensure all queries are cleared with support before payment, as refunds will not be provided in these cases.
                             </p>
                             <br />
+                             <p>
+                                <strong>7.</strong> if approved then refund will be credited to the original payment method within 7-10 business days.
+                            </p>
+                            <br />
                             <p>
                                 Should you have any further inquiries or wish to request a refund, please contact us at <strong>teamdesigncrate@gmail.com</strong> or raise a ticket on your profile dashboard.
                             </p>
