@@ -44,12 +44,14 @@ export default function ContactSection() {
             <ContactCard
               icon={<PhoneIcon />}
               title="Call us"
-              subtitle="+91 90000 00000"
+              subtitle="+91 9574297123"
             />
             <ContactCard
               icon={<PinIcon />}
               title="Our location"
-              subtitle="Mumbai, MH, India"
+              subtitle="6TH, 608, ELEPHANTA BUSINESS HUB<br />
+                                    SINGANPOR ROAD, KATARGAM<br />
+                                    SURAT, Gujarat, 395004"
             />
           </div>
         </div>
