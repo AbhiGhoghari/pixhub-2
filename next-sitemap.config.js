@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://designcrate.in",
+  siteUrl: "https://designcrate.co",
   generateRobotsTxt: true,
 };

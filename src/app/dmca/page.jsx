@@ -36,7 +36,7 @@ export default function DMCA() {
                   {/* exact text preserved */}
                   <p>DMCA Policy</p>
                   <p>
-                    We do not share details of your accounts. Several methods are available for sharing access. This process is well known to the account owner. In addition to the server and maintenance of the website, we do not charge for anything else. ‍ We do not sell or take money for access. There are only server costs involved. Please contact us if we have shared anything belonging to your property. ‍ We will take action as soon as possible. You can file your complaint on our maintained email address <a href="mailto:support@designcrate.in" className="underline decoration-white/40 hover:decoration-white">support@designcrate.in</a>. Design Crate will delete the tool or the information belonging to your property.
+                    We do not share details of your accounts. Several methods are available for sharing access. This process is well known to the account owner. In addition to the server and maintenance of the website, we do not charge for anything else. ‍ We do not sell or take money for access. There are only server costs involved. Please contact us if we have shared anything belonging to your property. ‍ We will take action as soon as possible. You can file your complaint on our maintained email address <a href="mailto:support@designcrate.co" className="underline decoration-white/40 hover:decoration-white">support@designcrate.co</a>. Design Crate will delete the tool or the information belonging to your property.
                   </p>
                   <p>Thank you for trusting Design Crate. Your privacy matters to us.</p>
                 </div>
