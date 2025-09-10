@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://designcrate.in
+Host: https://designcrate.co
 
 # Sitemaps
-Sitemap: https://designcrate.in/sitemap.xml
+Sitemap: https://designcrate.co/sitemap.xml
