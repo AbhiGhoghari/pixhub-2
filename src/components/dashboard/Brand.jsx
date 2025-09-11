@@ -53,51 +53,51 @@ import stream6 from '../../../public/image/brand/streaming/somm.webp';
 import stream7 from '../../../public/image/brand/streaming/tastemade.webp';
 
 const sections = [
-  // {
-  //   title: 'AI & Content Writing',
-  //   brands: [
-  //     { label: 'ChatGPT Plus', src: ai2 }, { label: 'WordAI', src: ai7 }, { label: 'CreaitorAI', src: ai1 },
-  //     { label: 'Designs.ai', src: ai3 }, { label: 'QuillBot', src: ai6 }, { label: 'Grammarly', src: ai4 },
-  //     { label: 'Ollie', src: ai5 }, { label: 'Wordtune', src: ai8 },
-  //   ],
-  // },
-  // {
-  //   title: 'Asset Platforms',
-  //   brands: [
-  //     { label: 'Envato', src: asset6 }, { label: 'Freepik', src: asset3 }, { label: 'Motion Array', src: asset4 },
-  //     { label: 'Flaticon', src: asset2 }, { label: 'Epidemic Sound', src: asset1 }, { label: 'rawpixel', src: asset5 },
-  //   ],
-  // },
-  // {
-  //   title: 'Graphic & Video Creation',
-  //   brands: [
-  //     { label: 'Canva', src: graphic1 }, { label: 'PicsArt', src: graphic2 }, { label: 'VistaCreate', src: graphic8 },
-  //     { label: 'Renderforest', src: graphic6 }, { label: 'Placeit', src: graphic4 }, { label: 'Snapied', src: graphic7 },
-  //     { label: 'Postermywall', src: graphic5 }, { label: 'Pixlr', src: graphic3 },
-  //   ],
-  // },
-  // {
-  //   title: 'Learning Platforms',
-  //   brands: [
-  //     { label: 'Skillshare', src: learning10 }, { label: 'Curiosity', src: learning3 }, { label: 'Curiosity U', src: learning4 },
-  //     { label: 'Bookmate', src: learning1 }, { label: 'Everand', src: learning6 }, { label: 'Perlego', src: learning7 },
-  //     { label: 'Scribd', src: learning9 }, { label: 'Udemy', src: learning12 }, { label: 'Skills', src: learning11 },
-  //     { label: 'Brilliant', src: learning2 }, { label: 'Quizlet', src: learning8 }, { label: 'IXL', src: learning5 },
-  //   ],
-  // },
+  {
+    title: 'AI & Content Writing',
+    brands: [
+      { label: 'ChatGPT Plus', src: ai2 }, { label: 'WordAI', src: ai7 }, { label: 'CreaitorAI', src: ai1 },
+      { label: 'Designs.ai', src: ai3 }, { label: 'QuillBot', src: ai6 }, { label: 'Grammarly', src: ai4 },
+      { label: 'Ollie', src: ai5 }, { label: 'Wordtune', src: ai8 },
+    ],
+  },
+  {
+    title: 'Asset Platforms',
+    brands: [
+      { label: 'Envato', src: asset6 }, { label: 'Freepik', src: asset3 }, { label: 'Motion Array', src: asset4 },
+      { label: 'Flaticon', src: asset2 }, { label: 'Epidemic Sound', src: asset1 }, { label: 'rawpixel', src: asset5 },
+    ],
+  },
+  {
+    title: 'Graphic & Video Creation',
+    brands: [
+      { label: 'Canva', src: graphic1 }, { label: 'PicsArt', src: graphic2 }, { label: 'VistaCreate', src: graphic8 },
+      { label: 'Renderforest', src: graphic6 }, { label: 'Placeit', src: graphic4 }, { label: 'Snapied', src: graphic7 },
+      { label: 'Postermywall', src: graphic5 }, { label: 'Pixlr', src: graphic3 },
+    ],
+  },
+  {
+    title: 'Learning Platforms',
+    brands: [
+      { label: 'Skillshare', src: learning10 }, { label: 'Curiosity', src: learning3 }, { label: 'Curiosity U', src: learning4 },
+      { label: 'Bookmate', src: learning1 }, { label: 'Everand', src: learning6 }, { label: 'Perlego', src: learning7 },
+      { label: 'Scribd', src: learning9 }, { label: 'Udemy', src: learning12 }, { label: 'Skills', src: learning11 },
+      { label: 'Brilliant', src: learning2 }, { label: 'Quizlet', src: learning8 }, { label: 'IXL', src: learning5 },
+    ],
+  },
   {
     title: 'SEO & Marketing',
     brands: [
       { label: 'SE Ranking', src: seo1 }, { label: 'Mangools', src: seo3 }, { label: 'Seobility', src: seo2 }, { label: 'StoryBase', src: seo4 },
     ],
   },
-  // {
-  //   title: 'Streaming & Entertainment',
-  //   brands: [
-  //     { label: 'Prime Video', src: stream5 }, { label: 'MUBI', src: stream4 }, { label: 'Crunchyroll', src: stream1 },
-  //     { label: 'Somm TV', src: stream6 }, { label: 'Da Vinci', src: stream2 }, { label: 'Kidstream', src: stream3 }, { label: 'Tastemade', src: stream7 },
-  //   ],
-  // },
+  {
+    title: 'Streaming & Entertainment',
+    brands: [
+      { label: 'Prime Video', src: stream5 }, { label: 'MUBI', src: stream4 }, { label: 'Crunchyroll', src: stream1 },
+      { label: 'Somm TV', src: stream6 }, { label: 'Da Vinci', src: stream2 }, { label: 'Kidstream', src: stream3 }, { label: 'Tastemade', src: stream7 },
+    ],
+  },
 ];
 
 /* ...your existing imports & sections stay the same... */

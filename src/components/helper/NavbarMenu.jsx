@@ -80,7 +80,7 @@ function Navbar({ className }) {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:flex gap-2">
-            {/* <Link
+            <Link
               href="/signin"
               className="rounded-full px-4 py-2 text-sm font-semibold text-white/90 ring-1 ring-white/15 bg-white/5 hover:bg-white/10 hover:text-white transition"
               aria-label="Log in"
@@ -94,7 +94,7 @@ function Navbar({ className }) {
               aria-label="Sign up"
             >
               Sign up
-            </Link> */}
+            </Link>
           </div>
 
           {/* Mobile toggle */}

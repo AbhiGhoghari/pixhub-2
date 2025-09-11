@@ -5,9 +5,9 @@ import { FaPlus } from "react-icons/fa6";
 
 const faqs = [
     {
-        question: "What is designcrate.co?",
+        question: "What is Designcrate.in?",
         answer:
-            "designcrate.co is a premium membership platform that provides access to a curated collection of digital tools for students, designers, developers, and content creators at an affordable price.",
+            "Designcrate.in is a premium membership platform that provides access to a curated collection of digital tools for students, designers, developers, and content creators at an affordable price.",
     },
     {
         question: "How does Designcrate works?",
@@ -15,9 +15,9 @@ const faqs = [
             "Once you become a member, you get exclusive access to various premium tools through our user panel. You can activate the tools by following the provided instructions.",
     },
     {
-        question: "Who can benefit from designcrate.co?",
+        question: "Who can benefit from Designcrate.in?",
         answer:
-            "designcrate.co is designed for students, designers, developers, and content creators who are looking for affordable access to premium digital tools.",
+            "Designcrate.in is designed for students, designers, developers, and content creators who are looking for affordable access to premium digital tools.",
     },
     {
         question: "how much does membership cost?",
