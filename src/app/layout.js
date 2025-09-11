@@ -28,11 +28,11 @@ export const metadata = {
     title: "DesignCrate – Unlimited Creativity",
     description:
       "One membership gives you access to 50+ premium platforms for creators, students & businesses.",
-    url: "https://designcrate.co",
+    url: "https://designcrate.in",
     siteName: "DesignCrate",
     images: [
       {
-        url: "https://designcrate.co/og-image.jpg", // create this OG image
+        url: "https://designcrate.in/og-image.jpg", // create this OG image
         width: 1200,
         height: 630,
         alt: "DesignCrate Preview",
@@ -46,7 +46,7 @@ export const metadata = {
     title: "DesignCrate – 50+ Premium Platforms, One Subscription",
     description:
       "Access 50+ premium tools with one membership. No hidden fees, cancel anytime.",
-    images: ["https://designcrate.co/og-image.jpg"],
+    images: ["https://designcrate.in/og-image.jpg"],
   },
 };
 
