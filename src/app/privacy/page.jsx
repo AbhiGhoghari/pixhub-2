@@ -327,7 +327,7 @@ export default function Privacy() {
         { id: 'rights', title: '7) Your Rights' },
         { id: 'consent', title: '8) Consent' },
         { id: 'changes', title: '9) Changes to This Privacy Policy' },
-        { id: 'grievance', title: '10) Grievance Officer' },
+        // { id: 'grievance', title: '10) Grievance Officer' },
     ];
 
     return (
@@ -532,7 +532,7 @@ export default function Privacy() {
                             </p>
                         </ArticleCard>
 
-                        <ArticleCard id="grievance" title="10) Grievance Officer">
+                        {/* <ArticleCard id="grievance" title="10) Grievance Officer">
                             <div className="space-y-4">
                                 <div>
                                     <p><strong>Name of the Officer:</strong> Krinit</p>
@@ -552,7 +552,7 @@ export default function Privacy() {
                                     Time: Monday - Friday (9:00 - 18:00)</p>
                                 </div>
                             </div>
-                        </ArticleCard>
+                        </ArticleCard> */}
 
                         {/* Back to top */}
                         <div className="pt-4">
